@@ -65,7 +65,7 @@ TensorFlow debugger (tfdbg).
 *Winner: TensorFlow*
 
 As PyTorch ages, I expect the gap here will converge to zero. However, there is
-still some functionality which TensorFlow supports that PyTorch doesn't. An few
+still some functionality which TensorFlow supports that PyTorch doesn't. A few
 features that PyTorch doesn't have (at the time of writing) are:
 - Flipping a tensor along a dimension (`np.flip`, `np.flipud`, `np.fliplr`)
 - Checking a tensor for NaN and infinity (`np.is_nan`, `np.is_inf`)
@@ -163,7 +163,7 @@ numpy_var = variable.cpu().data.numpy()
 *Winner: PyTorch*
 
 Building or binding custom extensions written in C, C++ or CUDA is doable with
-both frameworks. TensorFlow again requires a more boiler plate code though is
+both frameworks. TensorFlow again requires more boiler plate code though is
 arguably cleaner for supporting multiple types and devices. In PyTorch you
 simply write an interface and corresponding implementation for each of the CPU
 and GPU versions. Compiling the extension is also straight-forward with both
