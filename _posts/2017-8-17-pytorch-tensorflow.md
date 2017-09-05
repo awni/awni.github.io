@@ -6,7 +6,7 @@ title: PyTorch or TensorFlow?
 This is a guide to the main differences I've found between
 [PyTorch](http://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/).
 This post is intended to be useful for anyone considering starting a new
-project or making the switch from one deep learning framework to another.  The
+project or making the switch from one deep learning framework to another. The
 focus is on programmability and flexibility when setting up the components of the
 training and deployment deep learning stack. I won't go into performance (speed
 / memory usage) trade-offs.
@@ -43,7 +43,7 @@ differ the most. In PyTorch the graph construction is dynamic, meaning the
 graph is built at run-time.  In TensorFlow the graph construction is static,
 meaning the graph is "compiled" and then run. As a simple example, in PyTorch
 you can write a for loop construction using standard Python syntax
-```
+```python
 for _ in range(T):
     h = torch.matmul(W, h) + b
 ```
