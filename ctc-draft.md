@@ -15,7 +15,7 @@ In this tutorial you will learn about the Connectionist Temporal Classification
 
 ## The Problem 
 
-We've[^8] seen an explosion in the use of neural networks for mapping sequences to
+We've seen an explosion in the use of neural networks for mapping sequences to
 sequences. One work-horse algorithm for neural sequence transduction is CTC.
 Certain assumptions made by the CTC algorithm make it especially well suited
 for problems such as automatic speech recognition and hand-writing recognition,
