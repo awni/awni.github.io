@@ -156,11 +156,9 @@ alignment $$A$$ frame-by-frame. The outer sum marginalizes over all possible
 alignments to give the conditional output probability $$p(Y \mid X)$$.
 
 The hard part of the CTC loss is not understanding what it is, but computing it
-efficiently. The set $$\mathcal{A}$$ can be *very* large. For a $$Y$$ of length
-$$U$$ without any repeat characters and an $$X$$ of length $$T$$ the size of
-the set is $${T + U \choose T - U}$$. For $$T=100$$ and $$U=50$$ this number is
-almost $$10^{40}$$. For most practical problems, we can't delineate the
-elements of $$\mathcal{A}$$ to compute the sum above.
+efficiently. The set $$\mathcal{A}$$ can be *very* large.[^0] For most
+practical problems, we can't delineate the elements of $$\mathcal{A}$$ to
+compute the sum above.
 
 Instead, we can compute the CTC loss both exactly and efficiently with a
 dynamic programming algorithm. Like any dynamic programming algorithm, the key
@@ -273,7 +271,7 @@ lines indicate the output prefix that the proposed extension maps to.
 <div class="figure">
 <img src="{{ site.base_url }}/images/ctc/prefix_beam_search.svg" />
 <div class="caption" markdown="span">
-Steps two and three and part of step four of a CTC beam search with an output
+Steps two, three and part of step four of a CTC beam search with an output
 alphabet $$\{\epsilon, a, b\}$$ and a beam size of three. The $$\lambda$$ token
 indicates the empty string. The blue nodes indicate the current hypothesis in
 the beam and the red and grey nodes indicate possible extensions. The red nodes
@@ -395,13 +393,12 @@ algorithms for sequence transduction.
 *This section requires some familiarity with the HMM and is not critical to
 understanding the CTC algorithm. Feel free to skip it on a first read.*
 
-The Hidden Markov Model (HMM) was developed in the 1960's with the first
-application to speech recognition in the 1970's. At a first glance an HMM based
-sequence transducer does not closely resemble a CTC model. However, the two
-algorithms have many similarities. Understanding the relationship between the
-two models helps to understand what exactly CTC does that couldn't be done
-before. Putting CTC in this context will also allow us to understand how it can
-be changed and potentially improved for various use cases.
+At a first glance a Hidden Markov Model (HMM) based sequence transducer does
+not closely resemble a CTC model. However, the two algorithms have many
+similarities. Understanding the relationship between the two models helps to
+understand what exactly CTC does that couldn't be done before. Putting CTC in
+this context will also allow us to understand how it can be changed and
+potentially improved for various use cases.
 
 We'll use the same notation from before, $$X$$ is the input sequence and $$Y$$
 is the output sequence with lengths $$T$$ and $$U$$ respectively. Like before
@@ -565,60 +562,75 @@ implementing  and using the CTC beam search.
 
 The correctness of the beam search can be tested as follows.
 1. Run the beam search algorithm on an arbitrary input. 
-2. Save the inferred output $$Y$$ and the corresponding score $$\bar{c}$$. 
-3. Compute the actual CTC score $$c$$ for $$Y$$ using the same input. 
+2. Save the inferred output $$\bar{Y}$$ and the corresponding score $$\bar{c}$$. 
+3. Compute the actual CTC score $$c$$ for $$\bar{Y}$$ using the same input. 
 4. Check that $$\bar{c} \approx c$$ with the former being no greater than the later.
-As the beam size increases the inferred output $$Y$$ may change, but the two
+As the beam size increases the inferred output $$\bar{Y}$$ may change, but the two
 numbers should grow closer.
 
 A common question when using a beam search decoder is the size of the beam to
 use.  There is a trade-off between accuracy and runtime. We can check if the
 beam size is in a good range. To do this first compute the CTC score for the
 inferred output $$c_i$$. Then compute the CTC score for the ground truth output
-$$c_g$$. If the two outputs are not the same, we should have $$c_i \lt c_g$$.
-If $$c_g << c_i$$ then the beam search is performing poorly and a large
+$$c_g$$. If the two outputs are not the same, we should have $$c_g \lt c_i$$.
+If $$c_i << c_g$$ then the beam search is performing poorly and a large
 increase in the beam size may be warranted.
 
 ### Bibliographic Notes
 {:.no_toc}
 
-The CTC algorithm was first published by [Graves et al.][ctc-2006] in 2006. The
-first experiments were on a popular phoneme recognition benchmark called
-[TIMIT].  Chapter 7 of Graves' [thesis] gives a more detailed treatment of CTC.
+The CTC algorithm was first published by [Graves et al., 2006][ctc-2006]. The
+first experiments were on [TIMIT], a popular phoneme recognition benchmark.
+Chapter 7 of Graves' [thesis] gives a more detailed treatment of CTC.
 
 One of the first applications of CTC to large vocabulary speech recognition was
-in 2014 by [Graves et al.][graves-2014]
-where they used a hybrid HMM and CTC trained model to achieve state-of-the-art
-results. [Hannun et al.] subsequently demonstrated state-of-the-art CTC based
-speech recognition on larger benchmarks. In 2007 [Liwicki et al.] achieved
-state-of-the-art results on an online handwriting recognition task using the
-CTC algorithm with an RNN.
+by [Graves et al., 2014][graves-2014] where they used a hybrid HMM and CTC
+trained model to achieve state-of-the-art results. [Hannun et al., 2014]
+subsequently demonstrated state-of-the-art CTC based speech recognition on
+larger benchmarks. [Liwicki et al., 2007] achieved state-of-the-art results on
+an online handwriting recognition task using the CTC algorithm with an RNN.
 
-For an introduction to the HMM and applications to speech recognition refer to
-Rabiner's [canonical tutorial]. 
+The Hidden Markov Model was developed in the 1960's with the first application
+to speech recognition in the 1970's. For an introduction to the HMM and
+applications to speech recognition refer to Rabiner's [canonical tutorial]. 
 
-Encoder-decoder models were simultaneously developed by [Cho et al.] and
-[Sutskever et al.] in 2014.  The online publication [Distill] has a great
-in-depth guide to attention in encoder-decoder models. 
+Encoder-decoder models were simultaneously developed by [Cho et al., 2014] and
+[Sutskever et al., 2014].  [Olah & Carter, 2016] give an in-depth guide to
+attention in encoder-decoder models in the online publication *Distill*.
 
 ### Acknowledgements
 {:.no_toc}
 
-[^1]: This example is from [Chan et al.](https://arxiv.org/pdf/1508.01211.pdf)
-[^2]: This is demonstrated in e.g. [Battenberg et al.](https://arxiv.org/pdf/1707.07413.pdf)
-[^3]: Note that if there are $$r$$ consecutive repeats in $$Y$$, the length $$U$$ must be less than $$T$$ by $$2r - 1$$.
+### Footnotes
+{:.no_toc}
+
+[^0]:
+    For a $$Y$$ of length $$U$$ without any repeat characters and an $$X$$ of
+    length $$T$$ the size of the set is $${T + U \choose T - U}$$. For $$T=100$$
+    and $$U=50$$ this number is almost $$10^{40}$$.
+
+[^1]:
+    This example is from [Chan et al., 2015](https://arxiv.org/pdf/1508.01211.pdf).
+
+[^2]:
+    This is demonstrated in e.g. [Battenberg et al.,
+    2017](https://arxiv.org/pdf/1707.07413.pdf).
+
+[^3]:
+    Note that if there are $$r$$ consecutive repeats in $$Y$$, the length $$U$$
+    must be less than $$T$$ by $$2r - 1$$.
 
 
 [log-sum-exp]: https://en.wikipedia.org/wiki/LogSumExp#log-sum-exp_trick_for_log-domain_calculations
 [ctc-2006]: ftp://ftp.idsia.ch/pub/juergen/icml2006.pdf
 [TIMIT]: https://catalog.ldc.upenn.edu/ldc93s1
 [thesis]: https://www.cs.toronto.edu/~graves/phd.pdf
-[Hannun et al.]: https://arxiv.org/pdf/1412.5567.pdf
-[Liwicki et al.]: https://www.cs.toronto.edu/~graves/icdar_2007.pdf
+[Hannun et al., 2014]: https://arxiv.org/pdf/1412.5567.pdf
+[Liwicki et al., 2007]: https://www.cs.toronto.edu/~graves/icdar_2007.pdf
 [canonical tutorial]: http://www.cs.ubc.ca/~murphyk/Software/HMM/rabiner.pdf
-[Cho et al.]: https://arxiv.org/pdf/1406.1078.pdf
-[Sutskever et al.]: https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf
-[Distill]: https://distill.pub/2016/augmented-rnns/
+[Cho et al., 2014]: https://arxiv.org/pdf/1406.1078.pdf
+[Sutskever et al., 2014]: https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf
+[Olah & Carter, 2016]: https://distill.pub/2016/augmented-rnns/
 [warp-ctc]: https://github.com/baidu-research/warp-ctc
 [PyTorch]: https://github.com/awni/warp-ctc
 [CTC loss]: https://www.tensorflow.org/api_docs/python/tf/nn/ctc_loss
