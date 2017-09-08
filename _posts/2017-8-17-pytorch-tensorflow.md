@@ -155,7 +155,7 @@ In PyTorch, I've found my code needs more frequent checks for CUDA availability
 and more explicit device management. This is especially the case when writing
 code that should be able to run on both the CPU and GPU. Also converting say a
 PyTorch Variable on the GPU into a NumPy array is somewhat verbose.
-```
+```python
 numpy_var = variable.cpu().data.numpy()
 ```
 
