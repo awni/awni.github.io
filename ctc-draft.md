@@ -32,9 +32,10 @@ accurate transcription.
 
 The sequence transduction problem has three properties which make it difficult
 to use traditional supervised learning algorithms.
-- Not all $$X \in \mathcal{X}$$ have the same length. The same is true for $$Y \in
-  \mathcal{Y}$$. In other words, the lengths $$T$$ and $$U$$ can vary. 
-- The lengths of the input and output are usually not the same or $$T \ne U$$.
+- Not all $$Y \in \mathcal{Y}$$ have the same length. The same is usually true
+  for $$X \in \mathcal{X}$$. In other words, the lengths $$T$$ and $$U$$ can
+  vary.
+- The ratio of the lengths $$T$$ and $$U$$ can vary.
 - We don't have an accurate alignment (a correspondence of the elements) of
   $$X$$ and $$Y$$.
 
@@ -230,15 +231,34 @@ To infer the most likely output sequence for a given input we solve
 Y^\* = \text{argmax}\_{Y \in \mathcal{Y}} p(Y \mid X).
 \end{align}
 
-One way to approximate this is with a standard beam search. A standard beam
-search computes a new set of hypotheses at each input time-step. The new set of
-hypotheses is generated from the previous set by extending each hypothesis with
-all possible output characters. Note that unless we introduce dependencies
-between outputs (e.g. by including a language model), a beam search is
-unecessary. We can compute the same result by taking the most likely output at
-each time-step. However, understanding the beam search is important to motivate
-the next search algorithm. Steps two and three of the beam search with a beam
-size of three are shown below for an alphabet of $$\{\epsilon, a, b\}$$.
+The simplest method to compute a likely $$Y$$ is to take the most likely output
+at each time-step. Since there are no conditional dependencies in the output,
+this computes exactly
+\begin{align}
+A^\* = \text{argmax}\_{A \in \mathcal{A}} p_t(a_t \mid X).
+\end{align}
+We can then collapse repeat characters and remove $$\epsilon$$ tokens to
+produce $$Y$$.
+
+In most applications this simple algorithm works well because CTC tends to
+allocate most of the probability to a single alignment $$A$$. However, this
+method is not guaranteed to find the most likely $$Y$$. This is because
+multiple alignments can map to the same $$Y$$. The sequences [a, a,
+$$\epsilon$$] and [a, a, a] could individually have lower probability than [b,
+b, b], though the sum of their probabilities could be larger. In this case, the
+beam search algorithm would propose [b, b, b] as the most likely hypothesis,
+corresponding to $$Y =$$ [b]. To account for this, the algorithm should
+consider the fact that [a, a, a] and [a, a, $$\epsilon$$] map to the same
+output, namely $$Y =$$ [a].
+
+We can solve this problem with a modified beam search. The modified beam search
+is also not guaranteed to find the most likely $$Y$$, but it has the nice
+property that we can trade-off more computation (namely a larger beam-size) for
+an asymptotically better solution.
+
+A regular beam search would compute a new set of hypotheses at each input
+time-step. The new set of hypotheses is generated from the previous set by
+extending each hypothesis with all possible output characters.
 
 <div class="figure">
 <img src="{{ site.base_url }}/images/ctc/beam_search.svg" />
@@ -250,23 +270,13 @@ grey and the selected extensions are red.
 </div>
 </div>
 
-This method is not guaranteed to find the most likely $$Y$$. This is because
-multiple alignments can map to the same $$Y$$. The sequences [a, a,
-$$\epsilon$$] and [a, a, a] could individually have lower probability than [b,
-b, b], though the sum of their probabilities could be larger. In this case, the
-beam search algorithm would propose [b, b, b] as the most likely hypothesis,
-corresponding to $$Y =$$ [b]. To account for this, the algorithm should
-consider the fact that [a, a, a] and [a, a, $$\epsilon$$] map to the same
-output, namely $$Y =$$ [a].
-
-We can modify the vanilla beam search algorithm to handle multiple alignments
-mapping to the same output. In this case instead of keeping a list of
-alignments in the beam, we store the output prefixes after collapsing repeats
-and removing $$\epsilon$$ characters. At each step of the search we accumulate
-scores for a given prefix based on all the alignments which map to it. The
-image below displays steps two, three and four of the algorithm. The dashed
-lines indicate the output prefix that the proposed extension maps to.
-
+We can modify the vanilla beam search to handle multiple alignments mapping to
+the same output. In this case instead of keeping a list of alignments in the
+beam, we store the output prefixes after collapsing repeats and removing
+$$\epsilon$$ characters. At each step of the search we accumulate scores for a
+given prefix based on all the alignments which map to it. The image below
+displays steps two, three and four of the algorithm. The dashed lines indicate
+the output prefix that the proposed extension maps to.
 
 <div class="figure">
 <img src="{{ site.base_url }}/images/ctc/prefix_beam_search.svg" />
@@ -296,9 +306,8 @@ when we rank the hypotheses at each step before pruning the beam, we should
 rank by the combined score.
 
 The implementation of this algorithm does not require much code. The code is,
-however, dense and tricky to get right. Refer to this
-[gist][decoder-gist] for an
-example implementation in Python.
+however, dense and tricky to get right. Refer to this [gist][decoder-gist] for
+an example implementation in Python.
 
 In some problems, such as speech recognition, incorporating a language model
 over the outputs significantly improves accuracy. In this case we can
@@ -309,10 +318,10 @@ Y^\* = \text{argmax}\_{Y \in \mathcal{Y}} p(Y \mid X) p(Y)^\alpha L(Y)^\beta.
 The function $$L(\cdot)$$ computes the length of $$Y$$ in terms of the language
 model tokens and serves as a word insertion bonus. The language model scores
 are only included when a prefix is extended by a character (or word) and not at
-every time-step. This causes the search to favor shorter prefixes, as measured
-by $$L(\cdot)$$, since they do not have many language model updates. The
-insertion bonus helps with this. The parameters $$\alpha$$ and $$\beta$$ are
-usually set by cross-validation. 
+every step of the algorithm. This causes the search to favor shorter prefixes,
+as measured by $$L(\cdot)$$, since they do not have many language model
+updates. The insertion bonus helps with this. The parameters $$\alpha$$ and
+$$\beta$$ are usually set by cross-validation. 
 
 ## Properties of CTC
 
@@ -376,13 +385,13 @@ of audio, but a character based CTC model would not allow for this.
 ### Input Synchronous Inference
 
 Inference with CTC is done in an *input synchronous* manner as opposed to an
-*output synchronous* manner. This means the beam search is pruned after each
-input time-step and the algorithm terminates when all of the input has been
-processed. This is opposed to output synchronous decoding which prunes the beam
-after each output time-step and typically terminates on an end-of-sequence
-marker. Input synchronous inference makes streaming the decoding process much
-easier. For some applications streaming the inference computation is critical
-to achieve low latency response times.
+*output synchronous* manner. This means the beam search is pruned after
+processing each input element and the algorithm terminates when all of the
+input has been seen. This is opposed to output synchronous decoding which
+prunes the beam after each output time-step and typically terminates on an
+end-of-sequence marker. Input synchronous inference makes streaming the
+decoding process easier. For some applications streaming the inference
+computation is critical to achieve low latency response times.
 
 ## CTC in Context 
 
@@ -592,7 +601,7 @@ an online handwriting recognition task using the CTC algorithm with an RNN.
 
 The Hidden Markov Model was developed in the 1960's with the first application
 to speech recognition in the 1970's. For an introduction to the HMM and
-applications to speech recognition refer to Rabiner's [canonical tutorial]. 
+applications to speech recognition see Rabiner's [canonical tutorial]. 
 
 Encoder-decoder models were simultaneously developed by [Cho et al., 2014] and
 [Sutskever et al., 2014].  [Olah & Carter, 2016] give an in-depth guide to
