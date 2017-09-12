@@ -4,8 +4,9 @@ title: An In-depth Guide to Connectionist Temporal Classification
 mathjax: true
 ---
 
-In this tutorial you will learn about the Connectionist Temporal Classification
-(CTC) algorithm -- a popular model for neural sequence transduction.
+In this tutorial you will learn about the *Connectionist Temporal
+Classification* (CTC) algorithm -- a popular model for neural sequence
+transduction.
 
 **Contents**
  
@@ -47,7 +48,7 @@ inference should be tractable.
 
 **Objective Function:** We should be able to efficiently compute a score for
 how likely any $$Y$$ is given an $$X$$. In our case the score will be a
-conditional probality $$p(Y \mid X)$$, though this isn't a strict requirement.
+conditional probability $$p(Y \mid X)$$, though this isn't a strict requirement.
 The function $$p(Y \mid X)$$ should be differentiable. This makes optimizing
 the function parameters easier. We need to compute the score $$p(Y \mid X)$$
 for $$X$$'s and $$Y$$'s of variable and differing lengths. We also want to
@@ -80,21 +81,21 @@ Let's use an example. Let the input length $$T = 6$$ and $$Y =$$ [c, a, t]. In
 this case, one way to align $$Y$$ and $$X$$ would be to let the elements of
 $$Y$$ align to multiple elements of $$X$$. So the alignment could be [c, c, a,
 a, a, t]. This approach has two problems.
-- Some elments of $$X$$ may not correspond to any element of $$Y$$. In this case, we
-  may not want to force every element of $$X$$ to match with an element of
-  $$Y$$.
+- Some elements of $$X$$ may not correspond to any element of $$Y$$. In this
+  case, we may not want to force every element of $$X$$ to match with an
+  element of $$Y$$.
 - The sequence $$Y$$ can have consecutive repeat characters. This means the
   alignments for a given $$Y$$ are not unique. We have no way to determine if
   the alignment [c, c, a, a, a, t] refers to [c, a, t] or [c, a, a, t] among
   others. Later we'll need to distinguish between these cases to perform
   inference with the model.
 
-To get around these problems, CTC introduces a new token to the of allowed
+To get around these problems, CTC introduces a new token to the set of allowed
 output characters. This new token is sometimes called the "blank" token. We'll
 refer to it here as $$\epsilon$$. When an input element aligns to $$\epsilon$$
 then no output element corresponds to it. 
 
-The aligments allowed by CTC are of length $$T$$, the length of the input. Let
+The alignments allowed by CTC are of length $$T$$, the length of the input. Let
 $$\mathcal{A}$$ be the set of alignments. We can compute $$\mathcal{A}$$ from
 $$Y$$ in two steps. 
 1. Optionally insert an $$\epsilon$$ at the beginning, end, and between every
@@ -109,7 +110,7 @@ differentiate between alignments of [c, a, t] and [c, a, a, t].
 
 Let's go back to the example. A few allowed alignments of $$Y$$ are
 [$$\epsilon$$, c, c, $$\epsilon$$, a, t], [c, c, a, a, t, t] and [c,
-$$\epsilon$$, $$\epsilon$$, $$\epsilon$$, a, t]. A few unallowed alignments are
+$$\epsilon$$, $$\epsilon$$, $$\epsilon$$, a, t]. A few disallowed alignments are
 [c, $$\epsilon$$, c, $$\epsilon$$, a, t], [c, c, a, t, t] and [c, $$\epsilon$$,
 $$\epsilon$$, $$\epsilon$$, t, t]. These are not allowed for the following
 reasons: the first corresponds to $$Y =$$ [c, c, a, t], the second has length
@@ -347,7 +348,7 @@ next letter should be 'A' and with low probability the next letter should be
 In fact speech recognizers using CTC are not able to learn an implicit language
 model nearly as well as other models which do not make this conditional
 independence assumption.[^2] However, this isn't always a bad trait. In some
-cases, having the model implicitly learn a strong language model over the ouput
+cases, having the model implicitly learn a strong language model over the output
 can make it less adaptable to new or altered domains. For example we might want
 to adapt a model trained to transcribe on phone conversations between friends
 to customer support calls. 
@@ -358,7 +359,7 @@ While the CTC algorithm does make strong assumptions about the form of
 alignments between $$X$$ and $$Y$$, technically the algorithm is
 *alignment-free*. The objective function marginalizes over the allowed
 alignments thus model is agnostic as to how probability is distributed amongst
-them. In some problems CTC ends up alotting most of the probability towards a
+them. In some problems CTC ends up allotting most of the probability towards a
 single alignment, though this is not guaranteed. To force the model to upweight
 a single alignment, we can replace the `sum` over the
 alignments with a `max`,
@@ -367,7 +368,7 @@ p(Y \mid X) = \max\_{A \in \mathcal{A}} \prod\_{t=1}^T p(a\_t \mid X).
 \end{align}
 
 As mentioned before, CTC allows only *strictly monotonic* alignments. In some
-problems such as speech recogntion this may be a valid assumption. For other
+problems such as speech recognition this may be a valid assumption. For other
 problems such as machine translation where a future word in a target sentence
 can align to an earlier part of the source sentence, this assumption might be a
 deal-breaker. The *strictly monotonic* property also implies that the length of
@@ -417,11 +418,12 @@ and compute
 \begin{align}
 p(Y \mid X) \propto p(X \mid Y) p(Y).
 \end{align}
-The $$p(Y)$$ term is straight-forward model to with a language model, so let's focus
-on $$p(X \mid Y)$$. Like before we'll let $$\mathcal{A}$$ be a set of allowed
-of alignments of $$Y$$ to $$X$$. In this case members of $$\mathcal{A}$$ have length $$T$$.
-Let's otherwise leave $$\mathcal{A}$$ unspecified for now. We'll come back to
-it later. We can marginalize over $$\mathcal{A}$$ to get
+The $$p(Y)$$ term is straight-forward to model with a language model, so let's
+focus on $$p(X \mid Y)$$. Like before we'll let $$\mathcal{A}$$ be a set of
+allowed of alignments of $$Y$$ to $$X$$. In this case members of
+$$\mathcal{A}$$ have length $$T$$.  Let's otherwise leave $$\mathcal{A}$$
+unspecified for now. We'll come back to it later. We can marginalize over
+$$\mathcal{A}$$ to get
 \begin{align}
 p(X \mid Y) = \sum\_{A \in \mathcal{A}} p(X, A \mid Y).
 \end{align}
@@ -503,8 +505,8 @@ of the CTC state diagram as a special case HMM which works well for many
 problems of interest. Incorporating the blank as a hidden state in the HMM
 allows us to use the alphabet of $$Y$$ as the other hidden states. This model
 also gives a set of allowed alignments which may be a good prior for some
-problems. Perhaps most importantly, CTC casts the problem discriminatively in
-terms of $$p(Y \mid X)$$. This allows us to train the model "end-to-end" and
+problems. Perhaps most importantly, CTC is discriminative as it models $$p(Y
+\mid X)$$ directly. This allows us to train the model "end-to-end" and
 unleashes the capacity of powerful models like the RNN.
 
 ### Encoder-Decoder Models
@@ -521,9 +523,9 @@ p(Y \mid X) &= \texttt{decode}(h).
 The $$\texttt{encode}(\cdot)$$ and $$\texttt{decode}(\cdot)$$ functions are
 typically RNNs. The decoder can optionally be equipped with an attention
 mechanism. The hidden state $$h$$ usually has dimensions $$T \times d$$ where
-$$d$$ is a hyperparameter.  Sometimes the encoder subsamples the input in
-which case the inner dimension of $$h$$ can be $$\frac{T}{s}$$ where $$s$$ is
-the subsampling factor.
+$$d$$ is a hyperparameter. Sometimes the encoder subsamples the input. If the
+encoder subsamples the input by a factor $$s$$ then the inner dimension of
+$$h$$ will be $$\frac{T}{s}$$.
 
 We can interpret CTC in the encoder-decoder framework. This is helpful to
 understand the developments in encoder-decoder models that are applicable to
@@ -533,8 +535,8 @@ models.
 **Encoder:** The encoder of a CTC model can be just about any encoder we find
 in commonly used encoder-decoder models. For example the encoder could be a
 multi-layer bidirectional RNN or a convolutional network. There is a constraint
-on the CTC encoder that doesn't apply to the others. The input length cannot be
-subsampled at such a rate that $$T$$ is less than $$U$$. 
+on the CTC encoder that doesn't apply to the others. We can't subsample the
+input at such a rate that $$\frac{T}{s}$$ is less than $$U$$. 
 
 **Decoder:** We can view the decoder of a CTC model as a simple linear
 transformation followed by a softmax normalization. This layer should project
@@ -554,7 +556,7 @@ Open-source software tools can make getting started with CTC much easier:
 - Baidu Research has open-sourced [warp-ctc]. The package is written in C++ and
   CUDA. The CTC loss function runs on either the CPU or the GPU. Bindings are
   available for Torch, TensorFlow and [PyTorch].
-- TensorFlow has built in [CTC loss] and [CTC beam search] funtions. The
+- TensorFlow has built in [CTC loss] and [CTC beam search] functions. The
   TensorFlow version doesn't support the GPU yet.
 
 **Numerical Stability:** Computing the CTC loss naively is numerically
