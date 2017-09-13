@@ -5,8 +5,20 @@ mathjax: true
 ---
 
 In this tutorial you will learn about the *Connectionist Temporal
-Classification* (CTC) algorithm -- a popular model for neural sequence
-transduction.
+Classification* (CTC) algorithm -- a popular model for sequence to sequence
+mapping with neural networks.
+
+<div style="border:1px;" class="figure">
+<img src="{{ site.base_url }}/images/ctc/problems.svg" />
+<div class="caption" markdown="span">
+Two problems commonly solved with CTC. **Left:** Hand-writing recognition. The
+input can be $$(x,y)$$ co-ordinates of a pen stroke or pixels in an image.
+**Right:** Speech recognition. The input is audio usually after applying a
+spectrogram or some other frequency based feature extractor. Other problems
+where CTC has been used successfully include lip reading from video, action
+labelling from video and keyword detection in audio.
+</div>
+</div>
 
 **Contents**
  
