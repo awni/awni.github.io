@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="609px" height="206px" viewBox="0 0 609 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>human_model</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="human_model">
+            <g id="axes_1" transform="translate(50.000000, 0.000000)">
+                <g id="patch_2" fill-rule="nonzero" fill="#FFFFFF">
+                    <polygon id="Shape" points="0 173.4 558 173.4 558 0.6 0 0.6"></polygon>
+                </g>
+                <g id="patch_3" transform="translate(57.000000, 121.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#4682B4" opacity="0.950973732">
+                    <polygon id="Shape" points="0.394286 52.4 22.714286 52.4 22.714286 0.2144 0.394286 0.2144"></polygon>
+                </g>
+                <g id="patch_4" transform="translate(137.000000, 79.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#4682B4" opacity="0.950973732">
+                    <polygon id="Shape" points="0.108571 94.4 22.428571 94.4 22.428571 0.67328 0.108571 0.67328"></polygon>
+                </g>
+                <g id="patch_5" transform="translate(216.000000, 52.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#4682B4" opacity="0.950973732">
+                    <polygon id="Shape" points="0.822857 121.4 23.142857 121.4 23.142857 0.0944 0.822857 0.0944"></polygon>
+                </g>
+                <g id="patch_6" transform="translate(296.000000, 18.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#4682B4" opacity="0.950973732">
+                    <polygon id="Shape" points="0.537143 155.4 22.857143 155.4 22.857143 0.29472 0.537143 0.29472"></polygon>
+                </g>
+                <g id="patch_7" transform="translate(376.000000, 150.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#4682B4" opacity="0.950973732">
+                    <polygon id="Shape" points="0.251429 23.4 22.571429 23.4 22.571429 0.31392 0.251429 0.31392"></polygon>
+                </g>
+                <g id="patch_8" transform="translate(455.000000, 22.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#4682B4" opacity="0.950973732">
+                    <polygon id="Shape" points="0.965714 151.4 23.285714 151.4 23.285714 0.78752 0.965714 0.78752"></polygon>
+                </g>
+                <g id="patch_9" transform="translate(79.000000, 139.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#CD5C5C" opacity="0.804064764">
+                    <polygon id="Shape" points="0.714286 34.4 23.034286 34.4 23.034286 0.8768 0.714286 0.8768"></polygon>
+                </g>
+                <g id="patch_10" transform="translate(159.000000, 117.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#CD5C5C" opacity="0.804064764">
+                    <polygon id="Shape" points="0.428571 56.4 22.748571 56.4 22.748571 0.0672 0.428571 0.0672"></polygon>
+                </g>
+                <g id="patch_11" transform="translate(239.000000, 85.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#CD5C5C" opacity="0.804064764">
+                    <polygon id="Shape" points="0.142857 88.4 22.462857 88.4 22.462857 0.20288 0.142857 0.20288"></polygon>
+                </g>
+                <g id="patch_12" transform="translate(318.000000, 20.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#CD5C5C" opacity="0.804064764">
+                    <polygon id="Shape" points="0.857143 153.4 23.177143 153.4 23.177143 0.2992 0.857143 0.2992"></polygon>
+                </g>
+                <g id="patch_13" transform="translate(398.000000, 149.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#CD5C5C" opacity="0.804064764">
+                    <polygon id="Shape" points="0.571429 24.4 22.891429 24.4 22.891429 0.48448 0.571429 0.48448"></polygon>
+                </g>
+                <g id="patch_14" transform="translate(478.000000, 91.000000)" stroke="#000000" fill-rule="nonzero" stroke-width="0.8" fill="#CD5C5C" opacity="0.804064764">
+                    <polygon id="Shape" points="0.285714 82.4 22.605714 82.4 22.605714 0.56192 0.285714 0.56192"></polygon>
+                </g>
+                <g id="patch_15" stroke="#000000" stroke-linecap="square">
+                    <path d="M0,0.6 L558,0.6" id="Shape"></path>
+                </g>
+                <g id="patch_16" transform="translate(558.000000, 0.000000)" stroke="#000000" stroke-linecap="square">
+                    <path d="M0,173.4 L0,0.6" id="Shape"></path>
+                </g>
+                <g id="patch_17" transform="translate(0.000000, 173.000000)" stroke="#000000" stroke-linecap="square">
+                    <path d="M0,0.4 L558,0.4" id="Shape"></path>
+                </g>
+                <g id="patch_18" stroke="#000000" stroke-linecap="square">
+                    <path d="M0,173.4 L0,0.6" id="Shape"></path>
+                </g>
+                <g id="matplotlib.axis_2" transform="translate(0.000000, 35.000000)" stroke-width="0.5" stroke="#000000" fill="#000000" fill-rule="nonzero">
+                    <g id="ytick_2" transform="translate(0.000000, 103.000000)">
+                        <g id="line2d_19">
+                            <g id="m97bcee3f1b-link" transform="translate(0.000000, 0.840000)">
+                                <path d="M0,0 L4,0" id="m97bcee3f1b"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="ytick_3" transform="translate(0.000000, 69.000000)">
+                        <g id="line2d_21">
+                            <g id="m97bcee3f1b-link" transform="translate(0.000000, 0.280000)">
+                                <path d="M0,0 L4,0" id="m97bcee3f1b"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="ytick_4" transform="translate(0.000000, 34.000000)">
+                        <g id="line2d_23">
+                            <g id="m97bcee3f1b-link" transform="translate(0.000000, 0.720000)">
+                                <path d="M0,0 L4,0" id="m97bcee3f1b"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="ytick_5">
+                        <g id="line2d_25">
+                            <g id="m97bcee3f1b-link" transform="translate(0.000000, 0.160000)">
+                                <path d="M0,0 L4,0" id="m97bcee3f1b"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="legend" transform="translate(18.000000, 8.000000)">
+                    <polygon id="Shape" stroke="#000000" stroke-width="0.5" fill="#4682B4" fill-rule="nonzero" opacity="0.950973732" points="0 12 10 12 10 2 0 2"></polygon>
+                    <polygon id="Shape" stroke="#000000" stroke-width="0.5" fill="#CD5C5C" fill-rule="nonzero" opacity="0.804064764" points="0 28 10 28 10 18 0 18"></polygon>
+                    <text id="Model" font-family="Helvetica" font-size="10" font-weight="normal" fill="#000000">
+                        <tspan x="15" y="10">Model</tspan>
+                    </text>
+                    <text id="Human" font-family="Helvetica" font-size="10" font-weight="normal" fill="#000000">
+                        <tspan x="15" y="26">Human</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="x_labels" transform="translate(108.000000, 181.000000)" font-size="10" font-family="Helvetica" fill="#000000" font-weight="normal">
+                <text id="American-Accents">
+                    <tspan x="0.881835938" y="10">American</tspan>
+                    <tspan x="4.21435547" y="22">Accents</tspan>
+                </text>
+                <text id="UK-Accents">
+                    <tspan x="93.0541992" y="10">UK</tspan>
+                    <tspan x="82.2143555" y="22">Accents</tspan>
+                </text>
+                <text id="European-Accents">
+                    <tspan x="159.31543" y="10">European</tspan>
+                    <tspan x="163.214355" y="22">Accents</tspan>
+                </text>
+                <text id="Indian-Accents">
+                    <tspan x="245.376953" y="10">Indian</tspan>
+                    <tspan x="241.214355" y="22">Accents</tspan>
+                </text>
+                <text id="High-SNR-(Noise-free">
+                    <tspan x="317.770996" y="10">High SNR</tspan>
+                    <tspan x="313.605957" y="22">(Noise-free)</tspan>
+                </text>
+                <text id="Low-SNR-(Noisy)">
+                    <tspan x="398.381836" y="10">Low SNR</tspan>
+                    <tspan x="403.66748" y="22">(Noisy)</tspan>
+                </text>
+            </g>
+            <g id="y_labels" transform="translate(30.000000, 28.000000)" font-size="10" font-family="Helvetica" fill="#000000" font-weight="normal">
+                <text id="20">
+                    <tspan x="0.938476562" y="10">20</tspan>
+                </text>
+                <text id="15">
+                    <tspan x="0.938476562" y="44">15</tspan>
+                </text>
+                <text id="10">
+                    <tspan x="0.938476562" y="79">10</tspan>
+                </text>
+                <text id="5">
+                    <tspan x="6.71923828" y="114">5</tspan>
+                </text>
+            </g>
+            <text id="word-error-rate" font-family="Helvetica" font-size="10" font-weight="normal" fill="#000000">
+                <tspan x="0.662597656" y="77">word</tspan>
+                <tspan x="0.943359375" y="89">error</tspan>
+                <tspan x="2.88427734" y="101">rate</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
