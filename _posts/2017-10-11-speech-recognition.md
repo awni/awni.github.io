@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Speech Recognition Is Not Solved 
-image: images/speech-recognition/wer.svg
 ---
 
 Ever since Deep Learning hit the scene in speech recognition, word error rates
