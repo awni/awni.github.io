@@ -49,7 +49,7 @@ Comparison of human transcribers to Baidu's Deep Speech 2 model on various
 types of speech.[^data_details] Notice the humans are worse at
 transcribing the non-American accents. This is probably due to an American bias
 in the transcriber pool. I would expect transcribers native to a given region
-to have much lower error rates for that regions accents.
+to have much lower error rates for that region's accents.
 </div>
 </div>
 
@@ -132,7 +132,7 @@ examples of context that people use but speech recognizers don't include:
 - Prior knowledge about the person we are speaking with.
 
 Currently, Android's speech recognizer has knowledge of your contact list so
-it can recognize your friends names.[^contacts] The voice search in maps
+it can recognize your friends' names.[^contacts] The voice search in maps
 products uses geolocation to narrow down the possible points-of-interest
 you might be asking to navigate to.[^geo_location]
 
