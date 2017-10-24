@@ -206,7 +206,7 @@ I look forward to the next five years of progress on these and other fronts.
 
 ### Acknowledgements
 
-Thanks to Marya Hannun for useful feedback and edits.
+Thanks to <a href="https://twitter.com/mrhannun">@mrhannun</a> for useful feedback and edits.
 
 ### Footnotes
 [^scottish_accent]:
