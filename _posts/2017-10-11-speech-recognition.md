@@ -206,9 +206,14 @@ I look forward to the next five years of progress on these and other fronts.
 
 ### Acknowledgements
 
-Thanks to <a href="https://twitter.com/mrhannun">@mrhannun</a> for useful feedback and edits.
+Thanks to [@mrhannun](https://twitter.com/mrhannun) for useful feedback and edits.
+
+### Edit
+
+Hacker News [discussion](https://news.ycombinator.com/item?id=15542669).
 
 ### Footnotes
+
 [^scottish_accent]:
     Just ask anyone with a [Scottish accent].
 
