@@ -18,6 +18,9 @@ kramdown:
     css_class: 'highlight'
 sass:
   style: :compressed
+gems:
+    - jekyll-sitemap
+    - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
