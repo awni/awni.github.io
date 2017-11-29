@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="491px" height="218px" viewBox="0 0 491 218" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>seq2seq_teacher_forcing</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="67" height="26" rx="8"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="seq2seq_teacher_forcing" transform="translate(1.000000, 0.000000)">
+            <g id="encoder" transform="translate(0.000000, 28.000000)">
+                <circle id="Oval" stroke="#000000" fill-opacity="0.5" fill="#4682B4" cx="18.5" cy="170.5" r="18.5"></circle>
+                <circle id="Oval" stroke="#000000" fill-opacity="0.5" fill="#4682B4" cx="95.5" cy="170.5" r="18.5"></circle>
+                <circle id="Oval" stroke="#000000" fill-opacity="0.5" fill="#4682B4" cx="260.5" cy="170.5" r="18.5"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="18.5" cy="87.5" r="18.5"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="95.5" cy="87.5" r="18.5"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="260.5" cy="87.5" r="18.5"></circle>
+                <path d="M18,151.826437 L18,110" id="Line" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <path id="Line-decoration-1" d="M18,110 L15,120.8 L21,120.8 L18,110 Z" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <path d="M95,151.785444 L95,110" id="Line" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <path id="Line-decoration-1" d="M95,110 L92,120.8 L98,120.8 L95,110 Z" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <path d="M260,151.672922 L260,110" id="Line" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <path id="Line-decoration-1" d="M260,110 L257,120.8 L263,120.8 L260,110 Z" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <path d="M37.6254883,87 C60.5043945,87 72.3331706,87 73.1118164,87" id="Line-2" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <path id="Line-2-decoration-1" d="M73.1118164,87 L62.3118164,84 L62.3118164,90 L73.1118164,87 Z" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <path d="M114.486816,87 C137.707845,87 149.707682,87 150.486328,87" id="Line-2" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <path id="Line-2-decoration-1" d="M150.486328,87 L139.686328,84 L139.686328,90 L150.486328,87 Z" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <path d="M210,87 C228.06073,87 237.393901,87 237.999512,87" id="Line-2" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <path id="Line-2-decoration-1" d="M237.999512,87 L227.199512,84 L227.199512,90 L237.999512,87 Z" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <path d="M17.8007812,68.9707031 C17.8007812,38.6552734 260.496094,58.3164063 259.972656,11.7773438" id="Path-2" stroke="#000000" stroke-width="2"></path>
+                <path d="M95.2919922,68.8486328 C95.1083984,40.8237305 260.026855,64.5668945 260.026855,12.2915039" id="Path-3" stroke="#000000" stroke-width="2"></path>
+                <path d="M260.058594,68.2539062 L260.058594,1" id="Line-3" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <path id="Line-3-decoration-1" d="M260.058594,1 L257.058594,11.8 L263.058594,11.8 L260.058594,1 Z" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <g id="ellipsis" transform="translate(164.000000, 84.000000)" fill="#000000">
+                    <circle id="Oval-2" cx="3" cy="3" r="3"></circle>
+                    <circle id="Oval-2" cx="20" cy="3" r="3"></circle>
+                    <circle id="Oval-2" cx="36" cy="3" r="3"></circle>
+                </g>
+                <text id="x1" font-family="STIXGeneral-Italic, STIXGeneral" font-size="18" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="12.004" y="172">x</tspan>
+                    <tspan x="19.996" y="178" font-size="12">1</tspan>
+                </text>
+                <text id="x2" font-family="STIXGeneral-Italic, STIXGeneral" font-size="18" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="89.004" y="172">x</tspan>
+                    <tspan x="96.996" y="178" font-size="12">2</tspan>
+                </text>
+                <text id="xT" font-family="STIXGeneral-Italic, STIXGeneral" font-size="18" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="254.668" y="172">x</tspan>
+                    <tspan x="262.66" y="178" font-size="12">T</tspan>
+                </text>
+            </g>
+            <g id="attend" transform="translate(240.000000, 0.000000)">
+                <g id="Rectangle">
+                    <use fill-opacity="0.2" fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#000000" stroke-width="1" x="0.5" y="0.5" width="66" height="25" rx="8"></rect>
+                </g>
+                <text id="Attend" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" letter-spacing="1.20000005" fill="#000000">
+                    <tspan x="9.62799988" y="18">Atten</tspan>
+                    <tspan x="48.3180001" y="18" letter-spacing="0.5">d</tspan>
+                </text>
+                <path d="M66.0390625,11.171875 C120.007812,11.171875 76.1904297,44.5458984 135.345703,44.34375" id="Path-7" stroke="#000000" stroke-width="2"></path>
+            </g>
+            <g id="decoder" transform="translate(282.000000, 26.000000)">
+                <g id="previous" opacity="0.297724185" transform="translate(62.000000, 85.000000)" stroke="#000000">
+                    <path d="M15.2519531,4 C25.7817587,4 31.349467,4 31.9550781,4 C32.5606892,4 26.9929809,4 15.2519531,4 Z" id="Line-2" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                    <polygon id="Triangle" fill="#000000" transform="translate(30.500000, 4.359375) rotate(90.000000) translate(-30.500000, -4.359375) " points="30.5 -2 34 10.71875 27 10.71875"></polygon>
+                    <path d="M13.5,4 L0.5,4" id="Line-4" stroke-width="2" stroke-linecap="square" stroke-dasharray="3,3"></path>
+                </g>
+                <path d="M119,152.672922 L119,111" id="Line" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <path id="Line-decoration-1" d="M119,111 L116,121.8 L122,121.8 L119,111 Z" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <circle id="Oval" stroke="#000000" fill-opacity="0.5" fill="#4682B4" cx="119.5" cy="171.5" r="18.5"></circle>
+                <path d="M188,152.672922 L188,111" id="Line" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <path id="Line-decoration-1" d="M188,111 L185,121.8 L191,121.8 L188,111 Z" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <circle id="Oval" stroke="#000000" fill-opacity="0.5" fill="#4682B4" cx="188.5" cy="171.5" r="18.5"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="118.5" cy="89.5" r="18.5"></circle>
+                <path d="M138,89 C156.06073,89 165.393901,89 165.999512,89" id="Line-2" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <path id="Line-2-decoration-1" d="M165.999512,89 L155.199512,86 L155.199512,92 L165.999512,89 Z" stroke="#000000" stroke-width="2" fill="#000000" stroke-linecap="round"></path>
+                <circle id="Oval" stroke="#000000" fill-opacity="0.6" fill="#CD5C5C" cx="118.5" cy="18.5" r="18.5"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="187.5" cy="89.5" r="18.5"></circle>
+                <path d="M118.902344,70.71875 C117.720703,31.0996094 4.43261719,70.5029297 3.43359375,8.984375" id="Path-4" stroke="#000000" stroke-width="2"></path>
+                <polygon id="Triangle" stroke="#000000" fill="#000000" points="3.5 1 7 13.71875 0 13.71875"></polygon>
+                <polygon id="Triangle" stroke="#000000" fill="#000000" transform="translate(92.500000, 18.200000) rotate(90.000000) translate(-92.500000, -18.200000) " points="92.5 12 96 24.3999996 89 24.3999996"></polygon>
+                <path d="M118.80957,70.2734375 L118.80957,40.6191406" id="Path-6" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <path id="Path-6-decoration-1" d="M118.80957,40.6191406 L115.80957,51.4191406 L121.80957,51.4191406 L118.80957,40.6191406 Z" stroke="#000000" stroke-width="2" fill="#000000"></path>
+                <text id="yu" font-family="STIXGeneral-Italic, STIXGeneral" font-size="18" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="113.004" y="21">y</tspan>
+                    <tspan x="120.996" y="27" font-size="12">u</tspan>
+                </text>
+                <text id="yu-1" font-family="STIXGeneral-Italic, STIXGeneral" font-size="18" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="109.006" y="173">y</tspan>
+                    <tspan x="116.998" y="179" font-size="12">u-1</tspan>
+                </text>
+                <text id="yu" font-family="STIXGeneral-Italic, STIXGeneral" font-size="18" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="182.004" y="173">y</tspan>
+                    <tspan x="189.996" y="179" font-size="12">u</tspan>
+                </text>
+                <path d="M113,9 L120,9" id="Line-5" stroke="#000000" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

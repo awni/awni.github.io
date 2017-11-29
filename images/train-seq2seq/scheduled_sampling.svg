@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="244px" height="193px" viewBox="0 0 244 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>scheduled_sampling</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="scheduled_sampling" transform="translate(1.000000, 1.000000)">
+            <circle id="Oval" stroke="#000000" fill-opacity="0.5" fill="#4682B4" fill-rule="nonzero" cx="88.5" cy="172.5" r="18.5"></circle>
+            <circle id="Oval" stroke="#000000" fill-opacity="0.6" fill="#CD5C5C" fill-rule="nonzero" cx="18.5" cy="18.5" r="18.5"></circle>
+            <circle id="Oval" stroke="#000000" fill="#D8D8D8" fill-rule="nonzero" cx="88.5" cy="89.5" r="18.5"></circle>
+            <polygon id="Triangle" stroke="#000000" fill="#000000" fill-rule="nonzero" points="88.5 110 92 123 85 123"></polygon>
+            <path d="M37,18 C53.6728116,18 50.3304489,77.3883473 50.3304489,111.439835 C50.3304489,145.491322 93.7269162,143.959725 88.4013672,112.543945" id="Path-5" stroke="#000000" stroke-width="2"></path>
+            <path d="M88.5,153.5 L88.5,136.5" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+            <circle id="Oval-2" stroke="#000000" stroke-width="0.5" fill-opacity="0.8" fill="#D8D8D8" cx="88" cy="135" r="10"></circle>
+            <circle id="Oval" stroke="#000000" fill-opacity="0.5" fill="#4682B4" fill-rule="nonzero" cx="158.5" cy="172.5" r="18.5"></circle>
+            <path d="M108,89 C126.061045,89 135.394378,89 136,89" id="Line-2" stroke="#000000" stroke-width="2" fill="#000000" fill-rule="nonzero" stroke-linecap="round"></path>
+            <polygon id="Line-2-decoration-1" stroke="#000000" stroke-width="2" fill="#000000" fill-rule="nonzero" stroke-linecap="round" points="136 89 125 86 125 92"></polygon>
+            <circle id="Oval" stroke="#000000" fill-opacity="0.6" fill="#CD5C5C" fill-rule="nonzero" cx="88.5" cy="18.5" r="18.5"></circle>
+            <circle id="Oval" stroke="#000000" fill="#D8D8D8" fill-rule="nonzero" cx="158.5" cy="89.5" r="18.5"></circle>
+            <polygon id="Triangle" stroke="#000000" fill="#000000" fill-rule="nonzero" points="158.5 110 162 123 155 123"></polygon>
+            <path d="M107.519531,18.1713867 C124.192343,18.1713867 120.330449,77.3883473 120.330449,111.439835 C120.330449,145.491322 150.384766,136.645508 153.327148,131.060547" id="Path-5" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M89,71 L89,41" id="Path-6" stroke="#000000" stroke-width="2" fill="#000000" fill-rule="nonzero"></path>
+            <polygon id="Path-6-decoration-1" stroke="#000000" stroke-width="2" fill="#000000" fill-rule="nonzero" points="89 41 86 52 92 52"></polygon>
+            <path d="M158.5,153.5 L158.5,121" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+            <text id="random" opacity="0.6" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="195" y="139">random</tspan>
+            </text>
+            <circle id="Oval-2" stroke="#000000" stroke-width="0.5" fill-opacity="0.8" fill="#D8D8D8" cx="158" cy="135" r="10"></circle>
+            <path d="M172.5,135.5 L191.5,135.5" id="Line-2" stroke="#979797" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

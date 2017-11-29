@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="494px" height="165px" viewBox="0 0 494 165" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>subsampling</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="38" width="30" height="30"></rect>
+        <rect id="path-2" x="33" y="38" width="30" height="30"></rect>
+        <rect id="path-3" x="66" y="38" width="30" height="30"></rect>
+        <rect id="path-4" x="99" y="38" width="30" height="30"></rect>
+        <rect id="path-5" x="132" y="38" width="30" height="30"></rect>
+        <rect id="path-6" x="165" y="38" width="30" height="30"></rect>
+        <rect id="path-7" x="198" y="38" width="30" height="30"></rect>
+        <rect id="path-8" x="231" y="38" width="30" height="30"></rect>
+        <rect id="path-9" x="264" y="38" width="30" height="30"></rect>
+        <rect id="path-10" x="297" y="38" width="30" height="30"></rect>
+        <rect id="path-11" x="330" y="38" width="30" height="30"></rect>
+        <rect id="path-12" x="363" y="38" width="30" height="30"></rect>
+        <rect id="path-13" x="396" y="38" width="30" height="30"></rect>
+        <rect id="path-14" x="429" y="38" width="30" height="30"></rect>
+        <rect id="path-15" x="462" y="38" width="30" height="30"></rect>
+        <rect id="path-16" x="0" y="0" width="30" height="30"></rect>
+        <rect id="path-17" x="66" y="0" width="30" height="30"></rect>
+        <rect id="path-18" x="132" y="0" width="30" height="30"></rect>
+        <rect id="path-19" x="198" y="0" width="30" height="30"></rect>
+        <rect id="path-20" x="264" y="0" width="30" height="30"></rect>
+        <rect id="path-21" x="330" y="0" width="30" height="30"></rect>
+        <rect id="path-22" x="396" y="0" width="30" height="30"></rect>
+        <rect id="path-23" x="66" y="0" width="30" height="30"></rect>
+        <rect id="path-24" x="198" y="0" width="30" height="30"></rect>
+        <rect id="path-25" x="330" y="0" width="30" height="30"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="subsampling" transform="translate(1.000000, 0.000000)">
+            <g id="bottom" transform="translate(0.000000, 96.000000)">
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#000000" stroke-width="1" x="0.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#000000" stroke-width="1" x="33.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <rect stroke="#000000" stroke-width="1" x="66.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <rect stroke="#000000" stroke-width="1" x="99.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <rect stroke="#000000" stroke-width="1" x="132.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-6"></use>
+                    <rect stroke="#000000" stroke-width="1" x="165.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    <rect stroke="#000000" stroke-width="1" x="198.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-8"></use>
+                    <rect stroke="#000000" stroke-width="1" x="231.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-9"></use>
+                    <rect stroke="#000000" stroke-width="1" x="264.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-10"></use>
+                    <rect stroke="#000000" stroke-width="1" x="297.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-11"></use>
+                    <rect stroke="#000000" stroke-width="1" x="330.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-12"></use>
+                    <rect stroke="#000000" stroke-width="1" x="363.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-13"></use>
+                    <rect stroke="#000000" stroke-width="1" x="396.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-14"></use>
+                    <rect stroke="#000000" stroke-width="1" x="429.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-15"></use>
+                    <rect stroke="#000000" stroke-width="1" x="462.5" y="38.5" width="29" height="29"></rect>
+                </g>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="0.421630859 38.185791 0.421630859 67.6220703 95.6206055 67.6220703 95.6206055 38.185791 62.5976563 0.603515625 33.3452148 0.603515625"></polygon>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="66.4216309 38.185791 66.4216309 67.6220703 161.620605 67.6220703 161.620605 38.185791 128.597656 0.603515625 99.3452148 0.603515625"></polygon>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="132.421631 38.185791 132.421631 67.6220703 227.620605 67.6220703 227.620605 38.185791 194.597656 0.603515625 165.345215 0.603515625"></polygon>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="198.421631 38.185791 198.421631 67.6220703 293.620605 67.6220703 293.620605 38.185791 260.597656 0.603515625 231.345215 0.603515625"></polygon>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="264.421631 38.185791 264.421631 67.6220703 359.620605 67.6220703 359.620605 38.185791 326.597656 0.603515625 297.345215 0.603515625"></polygon>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="330.421631 38.185791 330.421631 67.6220703 425.620605 67.6220703 425.620605 38.185791 392.597656 0.603515625 363.345215 0.603515625"></polygon>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="396.421631 38.185791 396.421631 67.6220703 491.620605 67.6220703 491.620605 38.185791 458.597656 0.603515625 429.345215 0.603515625"></polygon>
+            </g>
+            <g id="mid" transform="translate(33.000000, 67.000000)">
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-16"></use>
+                    <rect stroke="#000000" stroke-width="1" x="0.5" y="0.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-17"></use>
+                    <rect stroke="#000000" stroke-width="1" x="66.5" y="0.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-18"></use>
+                    <rect stroke="#000000" stroke-width="1" x="132.5" y="0.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-19"></use>
+                    <rect stroke="#000000" stroke-width="1" x="198.5" y="0.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-20"></use>
+                    <rect stroke="#000000" stroke-width="1" x="264.5" y="0.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-21"></use>
+                    <rect stroke="#000000" stroke-width="1" x="330.5" y="0.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-22"></use>
+                    <rect stroke="#000000" stroke-width="1" x="396.5" y="0.5" width="29" height="29"></rect>
+                </g>
+            </g>
+            <g id="top" transform="translate(33.000000, 0.000000)">
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-23"></use>
+                    <rect stroke="#000000" stroke-width="1" x="66.5" y="0.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-24"></use>
+                    <rect stroke="#000000" stroke-width="1" x="198.5" y="0.5" width="29" height="29"></rect>
+                </g>
+                <g id="Rectangle">
+                    <use fill-opacity="0.6" fill="#4682B4" fill-rule="evenodd" xlink:href="#path-25"></use>
+                    <rect stroke="#000000" stroke-width="1" x="330.5" y="0.5" width="29" height="29"></rect>
+                </g>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="0.3046875 67.2839355 0.3046875 96.6220703 161.580078 96.6220703 161.580078 67.2839355 95.1760254 30 65.923584 30"></polygon>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="132.46582 67.3024902 132.46582 96.6450195 293.483398 96.6450195 293.483398 67.3024902 227.871338 30 198.618896 30"></polygon>
+                <polygon id="Path-2" stroke="#000000" fill-opacity="0.4" fill="#D8D8D8" points="264.512939 67.3088379 264.512939 96.4980469 425.530762 96.4980469 425.530762 67.3088379 359.871338 30 330.618896 30"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
