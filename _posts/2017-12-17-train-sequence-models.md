@@ -145,7 +145,7 @@ trying to reproduce a baseline.
 One downside to using these models is that they can be quite slow. The
 attention computation scales as the product of the input and output sequence
 lengths, e.g. $O(TU)$. If the input sequence doubles in length and the output
-sequence doubles length the amount of computation quadruples.
+sequence doubles in length the amount of computation quadruples.
 
 
 **Bucket by Length:** When optimizing a model with a minibatch size greater
