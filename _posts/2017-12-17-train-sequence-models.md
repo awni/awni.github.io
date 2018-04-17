@@ -198,7 +198,7 @@ baseline sequence-to-sequence model, I strongly recommend all of them.
 
 ### Acknowledgements
 
-Thanks to [Ziang Xie](https://twitter.com/zx3175) for useful feedback and
+Thanks to [Ziang Xie](https://twitter.com/ziangx1e) for useful feedback and
 suggestions.
 
 ### Footnotes
