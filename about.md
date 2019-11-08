@@ -4,6 +4,5 @@ title: About
 permalink: /about/
 ---
 
-I am a PhD student in the Computer Science Department at Stanford University
-specializing in Machine Learning. You can find more information at my [academic
-webpage](http://stanford.edu/~awni/).
+I am currently a Research Scientist at Facebook AI Research. You can find more
+information at my [academic webpage](http://ai.stanford.edu/~awni/).
