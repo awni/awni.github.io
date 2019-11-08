@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="346px" height="170px" viewBox="0 0 346 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>hmm_inference</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hmm_inference" transform="translate(1.000000, -3.000000)">
+            <g id="start" transform="translate(0.000000, 67.000000)">
+                <ellipse id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="41" cy="20" rx="41" ry="20"></ellipse>
+                <text id="&lt;S&gt;" font-family="ArialNarrow, Arial Narrow" font-size="18" font-weight="normal" line-spacing="12" fill="#000000">
+                    <tspan x="24" y="27">&lt;</tspan>
+                    <tspan x="33" y="26" font-family="CourierNewPSMT, Courier New">S</tspan>
+                    <tspan x="44" y="27">&gt;</tspan>
+                </text>
+            </g>
+            <g id="verb" transform="translate(262.000000, 67.000000)">
+                <ellipse id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="41" cy="20" rx="41" ry="20"></ellipse>
+                <text id="VERB" font-family="CourierNewPSMT, Courier New" font-size="16" font-weight="normal" fill="#000000">
+                    <tspan x="22.796875" y="24">VERB</tspan>
+                </text>
+            </g>
+            <g id="article" transform="translate(131.000000, 4.000000)">
+                <ellipse id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="41" cy="20" rx="41" ry="20"></ellipse>
+                <text id="ARTICLE" font-family="CourierNewPSMT, Courier New" font-size="16" font-weight="normal" fill="#000000">
+                    <tspan x="7.39453125" y="25">ARTICLE</tspan>
+                </text>
+            </g>
+            <g id="noun" transform="translate(131.000000, 132.000000)">
+                <ellipse id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="41" cy="20" rx="41" ry="20"></ellipse>
+                <text id="NOUN" font-family="CourierNewPSMT, Courier New" font-size="16" font-weight="normal" fill="#000000">
+                    <tspan x="21.796875" y="24">NOUN</tspan>
+                </text>
+            </g>
+            <path id="Line-2" d="M214.002336,21.9936233 C237.409534,21.8870843 255.522093,24.7652949 268.346935,30.6411411 C279.690201,35.838187 291.033119,45.1315253 302.381724,58.5154795 L302.021,58.093 L305.138293,55.5642146 L307.315057,65.3882513 L298.149769,61.2352406 L301.244,58.723 L301.004826,58.4418889 C290.15484,45.7876769 279.331819,36.9201114 268.541166,31.8341132 L267.930409,31.5502651 C255.076483,25.6610937 236.765296,22.8065177 213.004071,22.9999834 L213.004071,22.9999834 L212.504087,23.0040543 L212.495946,22.0040875 Z" fill="#000000" fill-rule="nonzero"></path>
+            <text id="the-cat" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="46.27" y="14">the</tspan>
+                <tspan x="46.27" y="31">cat</tspan>
+            </text>
+            <text id="sat-cat" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="281.662" y="14">sat</tspan>
+                <tspan x="281.27" y="31">cat</tspan>
+            </text>
+            <text id="sat-cat" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="198.162" y="84">sat</tspan>
+                <tspan x="197.77" y="101">cat</tspan>
+            </text>
+            <text id="sat" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="127.662" y="93">sat</tspan>
+            </text>
+            <text id="sat" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="281.162" y="151">sat</tspan>
+            </text>
+            <text id="the-cat" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="46.77" y="151">the</tspan>
+                <tspan x="46.77" y="168">cat</tspan>
+            </text>
+            <path id="Line-3" d="M177.671203,44.3139319 L178.363915,45.474313 C186.127125,58.6519077 190.011719,72.1629034 190.011719,86 C190.011719,97.9189262 187.129466,110.429309 181.369442,123.529381 L181.586,123.031 L185.21506,124.757366 L177.28521,130.951514 L177.087801,120.891145 L180.683633,122.601452 C186.237125,109.814159 189.011719,97.6142409 189.011719,86 C189.011719,72.0933391 185.033706,58.5150544 177.071364,45.2574325 L177.071364,45.2574325 L176.813932,44.8287969 L177.671203,44.3139319 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Line-4" d="M41.2320319,108.332047 L41.4499925,108.782039 C46.2630998,118.718985 55.7990905,127.986065 70.0702509,136.571556 C82.811328,144.236553 99.9805141,148.763797 121.579292,150.142706 L121.032,150.106 L121.212386,146.121893 L129.999488,151.024632 L120.805035,155.11267 L120.986,151.105 L120.515033,151.074339 C99.5695473,149.633908 82.7817446,145.207067 70.1529754,137.78418 L69.5547491,137.428444 C55.130597,128.750914 45.4582544,119.351327 40.5500075,109.217961 L40.5500075,109.217961 L40.332047,108.767968 L41.2320319,108.332047 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Line-4" d="M307.296599,108.597472 L305.58057,118.512372 L302.347,116.129 L302.134079,116.402472 C291.954721,129.32845 281.31107,138.261711 270.198688,143.194235 L269.592093,143.459314 C256.347583,149.156103 237.488629,152.165802 213.006824,152.499953 L213.006824,152.499953 L212.50687,152.506777 L212.493223,151.50687 L214.033816,151.484169 C237.889326,151.081554 256.279728,148.096708 269.196969,142.540686 C280.561607,137.652477 291.46406,128.501779 301.899387,115.079669 L301.542,115.536 L298.335062,113.173589 L307.296599,108.597472 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Line-5" d="M120.58795,18.8840136 L129.997429,22.4493603 L121.499464,27.8377358 L121.095,23.87 L120.446102,23.9490063 C105.062283,25.8716648 91.3998102,29.245107 79.4583101,34.0678255 L78.4938517,34.4620327 C64.0793804,40.4244998 51.8864463,50.5293058 41.9096614,64.7866662 L41.9096614,64.7866662 L41.6229952,65.1963276 L40.8036724,64.6229952 L41.5963767,63.4963525 C51.585483,49.4642408 63.7589375,39.4748747 78.1116171,33.5379673 C90.6812097,28.3386242 105.159672,24.76228 121.546568,22.8071728 L120.993,22.874 L120.58795,18.8840136 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Line-6" d="M162.687258,43.5363897 L163.489112,53.5666952 L159.795716,52.0757287 C155.264241,64.4043258 153,76.0455039 153,87 C153,100.261377 156.318332,114.69612 162.960077,130.304222 L162.960077,130.304222 L163.155855,130.7643 L162.2357,131.155855 L161.650156,129.772102 C155.218315,114.399806 152,100.142441 152,87 C152,75.7585444 154.354651,63.8183239 159.060826,51.1801083 L158.869,51.7 L155.144126,50.1960563 L162.687258,43.5363897 Z" fill="#000000" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

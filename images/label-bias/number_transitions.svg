@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560px" height="196px" viewBox="0 0 560 196" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>number_transitions</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="number_transitions" transform="translate(1.000000, 1.000000)">
+            <g id="four_transitions">
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="20" cy="97" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="127" cy="174" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="127" cy="122" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="127" cy="72" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="127" cy="20" r="20"></circle>
+                <text id="A" font-family="CourierNewPSMT, Courier New" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="12.7988281" y="104">A</tspan>
+                </text>
+                <path id="Line" d="M106.608547,20.488754 L102.453176,29.6529716 L99.934,26.546 L31.9266245,81.7032894 L31.2967106,80.9266245 L99.303,25.769 L96.7839501,22.6629871 L106.608547,20.488754 Z" fill="#000000" fill-rule="nonzero"></path>
+                <path id="Line" d="M96.7748733,70.8988245 L106.69828,72.5649559 L99.411331,79.5040027 L98.239,75.679 L39.6684044,93.6245353 L39.3754647,92.6684044 L97.946,74.722 L96.7748733,70.8988245 Z" fill="#000000" fill-rule="nonzero"></path>
+                <path id="Line" d="M38.7648912,103.590867 L98.188,120.659 L99.2928942,116.815068 L106.700783,123.624854 L96.8082209,125.465293 L97.912,121.62 L38.4888164,104.552003 L38.7648912,103.590867 Z" fill="#000000" fill-rule="nonzero"></path>
+                <path id="Line" d="M31.2758649,113.296749 L99.93,168.919 L102.448533,165.811408 L106.608713,174.973445 L96.7829759,172.804367 L99.3,169.696 L30.6463585,114.073745 L31.2758649,113.296749 Z" fill="#000000" fill-rule="nonzero"></path>
+                <text id="0.25" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="61.324" y="35">0.25</tspan>
+                </text>
+                <text id="0.25" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="61.324" y="136">0.25</tspan>
+                </text>
+                <text id="0.25" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="61.324" y="76">0.25</tspan>
+                </text>
+                <text id="0.25" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="61.324" y="107">0.25</tspan>
+                </text>
+            </g>
+            <g id="two_transitions" transform="translate(207.000000, 27.000000)">
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="20" cy="69" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="126" cy="120" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="126" cy="20" r="20"></circle>
+                <text id="B" font-family="CourierNewPSMT, Courier New" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="12.7988281" y="76">B</tspan>
+                </text>
+                <path id="Line" d="M105.653289,19.716109 L100.799696,28.5304518 L98.528,25.237 L39.8723014,65.6954805 L39.3045195,64.8723014 L97.96,24.414 L95.6896589,21.1218406 L105.653289,19.716109 Z" fill="#000000" fill-rule="nonzero"></path>
+                <path id="Line" d="M38.9663656,75.5165779 L98.471,114.892 L100.679358,111.556593 L105.701643,120.275919 L95.7128112,119.062152 L97.919,115.726 L38.4145271,76.3505289 L38.9663656,75.5165779 Z" fill="#000000" fill-rule="nonzero"></path>
+                <text id="0.5" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="64.16" y="34">0.5</tspan>
+                </text>
+                <text id="0.5" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="64.16" y="90">0.5</tspan>
+                </text>
+            </g>
+            <g id="one_transition" transform="translate(413.000000, 77.000000)">
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="20" cy="21" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="125" cy="20" r="20"></circle>
+                <text id="C" font-family="CourierNewPSMT, Courier New" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="12.7988281" y="28">C</tspan>
+                </text>
+                <path id="Line" d="M96.5,15.5 L105.5,20 L96.5,24.5 L96.5,20.5 L39.5,20.5 L39.5,19.5 L96.5,19.5 L96.5,15.5 Z" fill="#000000" fill-rule="nonzero"></path>
+                <text id="1.0" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="61.16" y="16">1.0</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

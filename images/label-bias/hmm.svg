@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="412px" height="122px" viewBox="0 0 412 122" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>hmm</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hmm" transform="translate(-10.000000, -8.000000)">
+            <g id="node" transform="translate(90.000000, 0.000000)">
+                <circle id="Oval" stroke="#000000" stroke-width="2" cx="30" cy="29" r="20"></circle>
+                <text id="x1" font-family="STIXGeneral-Italic, STIXGeneral" font-size="30" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="18.84" y="32">x</tspan>
+                    <tspan x="32.16" y="40" font-family="STIXGeneral-Regular, STIXGeneral" font-size="18">1</tspan>
+                </text>
+            </g>
+            <g id="node" transform="translate(190.000000, 0.000000)">
+                <circle id="Oval" stroke="#000000" stroke-width="2" cx="30" cy="29" r="20"></circle>
+                <text id="x2" font-family="STIXGeneral-Italic, STIXGeneral" font-size="30" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="18.84" y="32">x</tspan>
+                    <tspan x="32.16" y="40" font-family="STIXGeneral-Regular, STIXGeneral" font-size="18">2</tspan>
+                </text>
+            </g>
+            <g id="node" transform="translate(90.000000, 80.000000)">
+                <circle id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="30" cy="29" r="20"></circle>
+                <text id="y1" font-family="STIXGeneral-Italic, STIXGeneral" font-size="30" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="18.84" y="32">y</tspan>
+                    <tspan x="32.16" y="40" font-family="STIXGeneral-Regular, STIXGeneral" font-size="18">1</tspan>
+                </text>
+            </g>
+            <g id="node" transform="translate(190.000000, 80.000000)">
+                <circle id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="30" cy="29" r="20"></circle>
+                <text id="y2" font-family="STIXGeneral-Italic, STIXGeneral" font-size="30" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="18.84" y="32">y</tspan>
+                    <tspan x="32.16" y="40" font-family="STIXGeneral-Regular, STIXGeneral" font-size="18">2</tspan>
+                </text>
+            </g>
+            <g id="node" transform="translate(0.000000, 89.000000)">
+                <circle id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="31" cy="20" r="20"></circle>
+                <text id="&lt;s&gt;" font-family="ArialNarrow, Arial Narrow" font-size="20" font-weight="normal" letter-spacing="-2.1" fill="#000000">
+                    <tspan x="14.568457" y="27">&lt;</tspan>
+                    <tspan x="22.0485352" y="27" font-family="CourierNewPSMT, Courier New" font-size="30">s</tspan>
+                    <tspan x="37.9514648" y="27">&gt;</tspan>
+                </text>
+            </g>
+            <g id="node" transform="translate(371.000000, 0.000000)">
+                <circle id="Oval" stroke="#000000" stroke-width="2" cx="30" cy="29" r="20"></circle>
+                <text id="xT" font-family="STIXGeneral-Italic, STIXGeneral" font-size="30" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="18.336" y="32">x</tspan>
+                    <tspan x="31.656" y="40" font-size="18">T</tspan>
+                </text>
+            </g>
+            <g id="node" transform="translate(371.000000, 80.000000)">
+                <circle id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="30" cy="29" r="20"></circle>
+                <text id="yT" font-family="STIXGeneral-Italic, STIXGeneral" font-size="30" font-style="italic" font-weight="normal" fill="#000000">
+                    <tspan x="18.336" y="32">y</tspan>
+                    <tspan x="31.656" y="40" font-size="18">T</tspan>
+                </text>
+            </g>
+            <g id="arrows" transform="translate(50.500000, 49.500000)" fill="#000000" fill-rule="nonzero">
+                <path id="Line" d="M70,-5.68434189e-14 L74.5,9 L70.5,8.999 L70.5,38.5 L69.5,38.5 L69.5,8.999 L65.5,9 L70,-5.68434189e-14 Z"></path>
+                <path id="Line" d="M39.265625,53.5 L48.265625,58 L39.265625,62.5 L39.265,58.5 L-0.5,58.5 L-0.5,57.5 L39.265,57.5 L39.265625,53.5 Z"></path>
+                <path id="Line" d="M140.5,53.5 L149.5,58 L140.5,62.5 L140.5,58.5 L89,58.5 L89,57.5 L140.5,57.5 L140.5,53.5 Z"></path>
+                <path id="Line" d="M212.25,53.5 L221.25,58 L212.25,62.5 L212.25,58.5 L189.75,58.5 L189.75,57.5 L212.25,57.5 L212.25,53.5 Z"></path>
+                <path id="Line" d="M169.5,5.68434189e-14 L174,9 L170,9 L170,39 L169,39 L169,9 L165,9 L169.5,5.68434189e-14 Z"></path>
+                <path id="Line" d="M350.5,0 L355,9 L351,9 L351,39 L350,39 L350,9 L346,9 L350.5,0 Z"></path>
+                <path id="Line" d="M321.213402,53.569821 L330.249983,57.9959018 L321.28717,62.5695186 L321.254,58.569 L298.754115,58.7540814 L298.745919,57.754115 L321.246,57.569 L321.213402,53.569821 Z"></path>
+            </g>
+            <g id="ellipse" transform="translate(290.000000, 103.000000)" fill="#000000">
+                <circle id="Oval" cx="4" cy="4" r="4"></circle>
+                <circle id="Oval" cx="23" cy="4" r="4"></circle>
+                <circle id="Oval" cx="42" cy="4" r="4"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

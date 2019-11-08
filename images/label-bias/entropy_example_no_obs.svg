@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560px" height="178px" viewBox="0 0 560 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>entropy_example_no_obs</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="entropy_example_no_obs" transform="translate(1.000000, 1.000000)">
+            <g id="uniform" transform="translate(206.000000, 0.000000)">
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="20" cy="69" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="126" cy="120" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="126" cy="20" r="20"></circle>
+                <path id="Line" d="M105.653289,19.716109 L100.799696,28.5304518 L98.528,25.237 L39.8723014,65.6954805 L39.3045195,64.8723014 L97.96,24.414 L95.6896589,21.1218406 L105.653289,19.716109 Z" fill="#000000" fill-rule="nonzero"></path>
+                <path id="Line" d="M38.9663656,75.5165779 L98.471,114.892 L100.679358,111.556593 L105.701643,120.275919 L95.7128112,119.062152 L97.919,115.726 L38.4145271,76.3505289 L38.9663656,75.5165779 Z" fill="#000000" fill-rule="nonzero"></path>
+                <text id="0.5" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="56.16" y="37">0.5</tspan>
+                </text>
+                <text id="0.5" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="57.16" y="111">0.5</tspan>
+                </text>
+                <text id="B" font-family="CourierNewPSMT, Courier New" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="13.2988281" y="76">B</tspan>
+                </text>
+                <text id="(b)" font-family="Helvetica" font-size="18" font-weight="normal" fill="#000000">
+                    <tspan x="52.5004883" y="173">(b)</tspan>
+                </text>
+            </g>
+            <g id="high_ent" transform="translate(412.000000, 0.000000)">
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="20" cy="69" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="126" cy="120" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="126" cy="20" r="20"></circle>
+                <path id="Line" d="M105.653289,19.716109 L100.799696,28.5304518 L98.528,25.237 L39.8723014,65.6954805 L39.3045195,64.8723014 L97.96,24.414 L95.6896589,21.1218406 L105.653289,19.716109 Z" fill="#000000" fill-rule="nonzero"></path>
+                <path id="Line" d="M38.9663656,75.5165779 L98.471,114.892 L100.679358,111.556593 L105.701643,120.275919 L95.7128112,119.062152 L97.919,115.726 L38.4145271,76.3505289 L38.9663656,75.5165779 Z" fill="#000000" fill-rule="nonzero"></path>
+                <text id="0.5" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="57.16" y="37">0.5</tspan>
+                </text>
+                <text id="0.5" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="57.16" y="111">0.5</tspan>
+                </text>
+                <text id="C" font-family="CourierNewPSMT, Courier New" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="14.2988281" y="76">C</tspan>
+                </text>
+                <text id="(c)" font-family="Helvetica" font-size="18" font-weight="normal" fill="#000000">
+                    <tspan x="54.0058594" y="172">(c)</tspan>
+                </text>
+            </g>
+            <g id="low_ent">
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="20" cy="69" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="126" cy="120" r="20"></circle>
+                <circle id="Oval" stroke="#000000" fill="#D8D8D8" cx="126" cy="20" r="20"></circle>
+                <path id="Line" d="M105.653289,19.716109 L100.799696,28.5304518 L98.528,25.237 L39.8723014,65.6954805 L39.3045195,64.8723014 L97.96,24.414 L95.6896589,21.1218406 L105.653289,19.716109 Z" fill="#000000" fill-rule="nonzero"></path>
+                <path id="Line" d="M38.9663656,75.5165779 L98.471,114.892 L100.679358,111.556593 L105.701643,120.275919 L95.7128112,119.062152 L97.919,115.726 L38.4145271,76.3505289 L38.9663656,75.5165779 Z" fill="#000000" fill-rule="nonzero"></path>
+                <text id="0.9" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="57.16" y="37">0.9</tspan>
+                </text>
+                <text id="0.1" font-family="Helvetica-Light, Helvetica" font-size="12" font-weight="300" fill="#000000">
+                    <tspan x="57.16" y="111">0.1</tspan>
+                </text>
+                <text id="A" font-family="CourierNewPSMT, Courier New" font-size="24" font-weight="normal" fill="#000000">
+                    <tspan x="13.2988281" y="76">A</tspan>
+                </text>
+                <text id="(a)" font-family="Helvetica" font-size="18" font-weight="normal" fill="#000000">
+                    <tspan x="54.5004883" y="173">(a)</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

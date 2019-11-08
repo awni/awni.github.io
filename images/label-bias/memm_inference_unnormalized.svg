@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="346px" height="170px" viewBox="0 0 346 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>memm_inference_unnormalized</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="memm_inference_unnormalized" transform="translate(1.000000, -1.000000)">
+            <g id="start" transform="translate(0.000000, 65.000000)">
+                <ellipse id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="41" cy="20" rx="41" ry="20"></ellipse>
+                <text id="&lt;S&gt;" font-family="ArialNarrow, Arial Narrow" font-size="18" font-weight="normal" line-spacing="12" fill="#000000">
+                    <tspan x="24" y="27">&lt;</tspan>
+                    <tspan x="33" y="26" font-family="CourierNewPSMT, Courier New">S</tspan>
+                    <tspan x="44" y="27">&gt;</tspan>
+                </text>
+            </g>
+            <g id="verb" transform="translate(262.000000, 65.000000)">
+                <ellipse id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="41" cy="20" rx="41" ry="20"></ellipse>
+                <text id="VERB" font-family="CourierNewPSMT, Courier New" font-size="16" font-weight="normal" fill="#000000">
+                    <tspan x="22.796875" y="24">VERB</tspan>
+                </text>
+            </g>
+            <g id="article" transform="translate(131.000000, 2.000000)">
+                <ellipse id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="41" cy="20" rx="41" ry="20"></ellipse>
+                <text id="ARTICLE" font-family="CourierNewPSMT, Courier New" font-size="16" font-weight="normal" fill="#000000">
+                    <tspan x="7.39453125" y="25">ARTICLE</tspan>
+                </text>
+            </g>
+            <g id="noun" transform="translate(131.000000, 130.000000)">
+                <ellipse id="Oval" stroke="#000000" stroke-width="2" fill="#D8D8D8" cx="41" cy="20" rx="41" ry="20"></ellipse>
+                <text id="NOUN" font-family="CourierNewPSMT, Courier New" font-size="16" font-weight="normal" fill="#000000">
+                    <tspan x="21.796875" y="24">NOUN</tspan>
+                </text>
+            </g>
+            <path id="Line" d="M120.615854,17.8159865 L129.997802,21.4531646 L121.458891,26.7764156 L121.084,22.8 L119.830843,22.9326034 C99.3946864,25.1352757 84.6507634,28.3458879 75.6162645,32.5512499 L75.2155504,32.7402144 C64.8826722,37.677034 53.1003959,48.3676865 39.8898065,64.8131307 L39.8898065,64.8131307 L39.5766758,65.2029373 L38.7970627,64.5766758 L39.6958743,63.4603762 C52.7556262,47.318952 64.4450952,36.7778244 74.7844496,31.8379106 C84.1688721,27.3542421 99.7497145,23.9953155 121.546557,21.7461071 L120.99,21.804 L120.615854,17.8159865 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Line-2" d="M214.843942,20.9747964 C239.684246,20.7025342 257.928152,23.220168 269.592412,28.545156 C280.052254,33.3203015 291.000471,42.6309079 302.448586,56.4718748 L302.091,56.043 L305.232711,53.5460754 L307.31116,63.3913814 L298.187846,59.1469568 L301.308,56.665 L301.090909,56.4028733 C290.140298,43.29278 279.676719,34.3940765 269.710546,29.7021717 L269.177119,29.454844 C257.672875,24.2029063 239.558393,21.7037351 214.850424,21.9747886 L214.850424,21.9747886 L213.008145,21.9999336 L212.508212,22.0080789 L212.491921,21.0082116 Z" fill="#000000" fill-rule="nonzero"></path>
+            <text id="sat,-0" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="115.878" y="93">sat, 0</tspan>
+            </text>
+            <text id="the,-100-cat,-5" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="26" y="17">the, 100</tspan>
+                <tspan x="26" y="34">cat, 5</tspan>
+            </text>
+            <text id="sat,-20-cat,-0" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="280" y="14">sat, 20</tspan>
+                <tspan x="280" y="31">cat, 0</tspan>
+            </text>
+            <text id="sat,-21-cat,-100" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="193" y="82">sat, 21</tspan>
+                <tspan x="193" y="99">cat, 100</tspan>
+            </text>
+            <text id="sat,-100" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="275.594" y="149">sat, 100</tspan>
+            </text>
+            <text id="the,-0-cat,-3" font-family="Helvetica-Light, Helvetica" font-size="14" font-weight="300" fill="#000000">
+                <tspan x="34.986" y="151">the, 0</tspan>
+                <tspan x="34.986" y="168">cat, 3</tspan>
+            </text>
+            <path id="Line-4" d="M307.296599,106.597472 L305.58057,116.512372 L302.347,114.129 L302.134079,114.402472 C291.954721,127.32845 281.31107,136.261711 270.198688,141.194235 L269.592093,141.459314 C256.347583,147.156103 237.488629,150.165802 213.006824,150.499953 L213.006824,150.499953 L212.50687,150.506777 L212.493223,149.50687 L214.033816,149.484169 C237.889326,149.081554 256.279728,146.096708 269.196969,140.540686 C280.561607,135.652477 291.46406,126.501779 301.899387,113.079669 L301.542,113.536 L298.335062,111.173589 L307.296599,106.597472 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Line-4" d="M41.2320319,106.332047 L41.4499925,106.782039 C46.2630998,116.718985 55.7990905,125.986065 70.0702509,134.571556 C82.811328,142.236553 99.9805141,146.763797 121.579292,148.142706 L121.032,148.106 L121.212386,144.121893 L129.999488,149.024632 L120.805035,153.11267 L120.986,149.105 L120.515033,149.074339 C99.5695473,147.633908 82.7817446,143.207067 70.1529754,135.78418 L69.5547491,135.428444 C55.130597,126.750914 45.4582544,117.351327 40.5500075,107.217961 L40.5500075,107.217961 L40.332047,106.767968 L41.2320319,106.332047 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Line-3" d="M178.171203,43.3139319 L178.863915,44.474313 C186.627125,57.6519077 190.511719,71.1629034 190.511719,85 C190.511719,96.9189262 187.629466,109.429309 181.869442,122.529381 L182.086,122.031 L185.71506,123.757366 L177.78521,129.951514 L177.587801,119.891145 L181.183633,121.601452 C186.737125,108.814159 189.511719,96.6142409 189.511719,85 C189.511719,71.0933391 185.533706,57.5150544 177.571364,44.2574325 L177.571364,44.2574325 L177.313932,43.8287969 L178.171203,43.3139319 Z" fill="#000000" fill-rule="nonzero"></path>
+            <path id="Line-6" d="M163.187258,42.5363897 L163.989112,52.5666952 L160.295716,51.0757287 C155.764241,63.4043258 153.5,75.0455039 153.5,86 C153.5,99.2613771 156.818332,113.69612 163.460077,129.304222 L163.460077,129.304222 L163.655855,129.7643 L162.7357,130.155855 L162.150156,128.772102 C155.718315,113.399806 152.5,99.1424407 152.5,86 C152.5,74.7585444 154.854651,62.8183239 159.560826,50.1801083 L159.369,50.7 L155.644126,49.1960563 L163.187258,42.5363897 Z" fill="#000000" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
