@@ -71,20 +71,19 @@ observation, score pairs are pictured.
 
 To compute the probability of `[ARTICLE, NOUN, VERB]`, we just follow the
 observations along each arc leading to the corresponding label. In this case
-the probability would be $1.0 * 0.9 * 1.0$.
+the probability would be $1.0\\!\times\\!0.9\\!\times\\!1.0$.
 
-As another example, say we drop the article and just have the sequence `{cat
-sat}`. While it's not a great sentence, the correct label should be `[NOUN,
+As another example, say we drop the article and just have the sequence `[cat
+sat]`. While it's not a great sentence, the correct label should be `[NOUN,
 VERB]`. However, if we follow the probabilities we see that the score for
-`[ARTICLE, NOUN]` is $0.9 * 0.3\\!=\\!0.27$ whereas the score for `[NOUN, VERB]` is
-$0.1 * 1.0\\!=\\!0.1$.
+`[ARTICLE, NOUN]` is $0.9\\!\times\\!0.3\\!=\\!0.27$ whereas the score for `[NOUN, VERB]` is
+$0.1\\!\times\\!1.0\\!=\\!0.1$.
 
 The model is not used to seeing `cat` at the start of a sentence, so the scores
-leading from the start state are poorly calibrated. What we need from the model
-is information about how uncertain the model is for a given observation and
-previous label pair. If the model has rarely seen the observation `cat` from
-the starting node `<S>` then we want to know that, and it should be included 
-in the scores.
+leading from the start state are poorly calibrated. What we need is information
+about how uncertain the model is for a given observation and previous label
+pair. If the model has rarely seen the observation `cat` from the starting node
+`<S>` then we want to know that, and it should be included in the scores.
 
 It's actually possible that the model did at some point implicitly store this
 uncertainty information. However, by normalizing the outgoing scores for a
@@ -107,15 +106,15 @@ see something interesting here. The outgoing scores for `cat` from `<S>` are
 small. Recall lower scores are worse. This means the model is much less
 confident about the observation `cat` from the start state than the observation
 `the` which has a score of 100. This information is completely erased when we
-normalize. That's the label bias problem.
+normalize. That's one symptom of the label bias problem.
 
 Notice in the unnormalized graph, the score for `[ARTICLE, NOUN]` is $5 + 21 =
 26$ while the score for `[NOUN, VERB]` is $3 + 100 = 103$. The right answer
-gets a better score in the unnormalized graph! We are adding scores here
+gets a better score in the unnormalized graph! Note, we are adding scores here
 instead of multiplying them because the unnormalized scores are in log-space.
 In other words $p(y_t \mid x_t, y_{t-1}) \propto e^{s(y_t, x_t, y_{t-1})}$.
 
-We can see the label bias problem quantitatively. This is observation is due to
+We can see the label bias problem quantitatively. This observation is due to
 Denker and Burges.[^denker94] Suppose our scoring function $s(y_t, x_t,
 y_{t-1})$ factorizes into the sum of two functions $f(y_t, x_t, y_{t-1})$ and
 $g(x_t, y_{t-1})$. Suppose further that $f(\cdot)$ mostly cares about how good
@@ -162,10 +161,15 @@ prefer one over the other. But the inference procedure will bias towards paths
 which go through state `C` over `B` and `A`. Paths which go through `A` will be
 the least preferred. To understand this, suppose that the same amount of
 probability arrives at the three states. State `A` will decrease the
-probability mass for any path by $0.25$, whereas state `B` will only decrease a
-given path's score by $0.5$ and state `C` won't penalize any path at all. In
-this case, all states ignore their observations, but the state with the fewest
-outgoing transitions is preferred.   
+probability mass for any path by a factor of four, whereas state `B` will only
+decrease a given path's score by a factor of two and state `C` won't penalize any
+path at all. In every case the observation is ignored, but the state with the
+fewest outgoing transitions is preferred.
+
+Even if outgoing transitions from states `A` and `B` did not ignore their
+observations they would still reduce a paths score since the probabilities
+aren't likely to be one. This would cause state `C` to be preferred even though
+it always ignores it's observation.
 
 ### Entropy Bias
 
