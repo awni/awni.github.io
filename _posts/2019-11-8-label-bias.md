@@ -134,7 +134,7 @@ previous state to be erased.
 
 ### Conservation of Score Mass
 
-The label bias problem results from a "conservation of score mass" (Bouttou,
+The label bias problem results from a "conservation of score mass" (Bottou,
 1991).[^bottou91] Conservation of score mass just says that the outgoing scores
 from a state for a given observation are normalized. This means that all of the
 incoming probability to a state must leave that state. An observation can only
@@ -167,7 +167,7 @@ path at all. In every case the observation is ignored, but the state with the
 fewest outgoing transitions is preferred.
 
 Even if outgoing transitions from states `A` and `B` did not ignore their
-observations they would still reduce a paths score since the probabilities
+observations, they would still reduce a paths score since the probabilities
 aren't likely to be one. This would cause state `C` to be preferred even though
 it always ignores it's observation.
 
@@ -179,8 +179,8 @@ have a low entropy distribution over next states given the previous state.
 Note this is distinct from the distribution $p(y_t \mid x_t, y_{t-1})$ which
 can have low entropy without directly causing label bias. However, if the
 conditional distribution $p(y_t \mid y_{t-1})$ has low entropy then we are
-potentially in trouble. For example, in the figure above, $p(y \mid \texttt{B})$ has
-lower entropy than $p(y \mid \texttt{A})$.
+potentially in trouble. For example, in the figure above, $p(y \mid
+\texttt{B})$ has lower entropy than $p(y \mid \texttt{A})$.
 
 Consider the three cases below. In each case there are two possible
 observations `a` and `b` and two possible successor states. We'd like to know
@@ -288,7 +288,7 @@ term.[^collobert19]
 
 ## A Brief History of the Label Bias Problem
 
-The first recorded observation of the label bias problem was in Léon Bouttou’s
+The first recorded observation of the label bias problem was in Léon Bottou’s
 PhD thesis.[^bottou91] The term "label-bias" was coined in the seminal work of
 Lafferty, McCallum and Pereira introducing conditional random
 fields.[^mcallum00] Solving the label bias problem was one of the motivations
@@ -298,7 +298,7 @@ models to give a principled solution to the label bias problem.
 An even earlier sequence model which overcame the label bias problem was the
 check reading system proposed by Denker and Burges[^denker94], though they did
 not use the term label bias. This work motivated the graph transformer networks
-of Bouttou, LeCun, Bengio and others.[^bottou97] For more references on
+of Bottou, LeCun, Bengio and others.[^bottou97] For more references on
 graph transformer networks visit Léon Bottou's page on [structure learning
 systems](https://leon.bottou.org/research/structured).
 
