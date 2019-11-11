@@ -304,17 +304,17 @@ systems](https://leon.bottou.org/research/structured).
 
 ## A Few Examples
 
-In this section we'll look at a few examples of models some of which suffer
+In this section we'll look at a few examples of models, some of which suffer
 from label bias and some of which do not. 
 
 ### Hidden Markov Model
 
-The hidden Markov model (HMM) is a generative model which makes two
-assumptions about the data distribution. First, it assumes that the observation
+The hidden Markov model (HMM) is a generative model which makes two assumptions
+about the data generating distribution. First, it assumes that the observation
 $x_t$ is conditionally independent of all other $y$ and $x$ given the hidden
 state (i.e. label) at time $t$, $y_t$. Second, the HMM makes the usual Markov
-independence assumption that $y_t$ is conditionally independent of all
-previous $y$ given $y_{t-1}$. In equations
+independence assumption that $y_t$ is conditionally independent of all previous
+$y$ given $y_{t-1}$. In equations
 \\[
 p(X, Y) = p(y_0) \prod_{t=1}^T p(x_t \mid y_t) p(y_t \mid y_{t-1}).
 \\]
@@ -366,7 +366,7 @@ with attention.
 
 These models are locally normalized,
 \\[
-\sum_{i=1}^c p(y_i \mid y_{\<t}, X) = 1
+\sum_{i=1}^c p(y_i \mid y_{\<t}, X) = 1,
 \\]
 hence they can suffer from label bias. Whether or not this is an issue in
 practice remains to be seen. Some attempts have been made to design globally
@@ -383,8 +383,8 @@ in-depth tutorial.[^hannun17])
 $\gdef\A{\mathcal{A}}$
 
 For a given input-output pair $(X, Y)$, CTC allows a set of alignments
-$\A_{X,Y}$. We let $A = [a_1, \ldots, a_T] \in \A_{X,Y}$ be one such alignment.
-Note $A$ has the same length as $X$, namely $T$. The probability of a sequence
+$\A_{X,Y}$. We let $A\\!=\\![a_1, \ldots, a_T] \in \A_{X,Y}$ be one such alignment.
+Note, $A$ has the same length as $X$, namely $T$. The probability of a sequence
 $Y$ given an input $X$ can then be computed as
 \\[
     p(Y \mid X) = \sum_{A \in \A_{X,Y}} \prod_{t=1}^T p(a_t \mid X)
@@ -396,8 +396,8 @@ the outputs $a_t$ are conditionally independent of one another given the input
 $X$. 
 
 The CTC model is a special case in that it is both locally normalized and
-globally normalized. Because of the conditional independence assumption the two
-are equivalent. At the level of an individual alignment, we have
+globally normalized. Because of the conditional independence assumption, the
+two are equivalent. At the level of an individual alignment, we have
 \\[
 p(A \mid X) = \prod_{t=1}^T \frac{e^{s_t(a_t, X)}}{\sum_{i=1}^c e^{s_t(a_i, X)}} 
     = \frac{\prod_{t=1}^T e^{s_t(a_t, X)}}{\prod_{t=1}^T \sum_{i=1}^c e^{s_t(a_i, X)}}.
@@ -415,7 +415,7 @@ p(A \mid X) = \frac{e^{\sum_{t=1}^T s_t(a_t, X)}}{\sum_{A^\prime} e^{\sum_{t=1}^
 
 Used on its own, CTC does not suffer from label bias. There are a couple of
 ways to see this. First, as we described, CTC is globally normalized at the
-level of the alignment and label bias results from local normalization. 
+level of an alignment and label bias results from local normalization. 
 
 Second, the conditional independence assumption made by CTC removes label bias.
 If the next state prediction does not depend on any previous state, then there
