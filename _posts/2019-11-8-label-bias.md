@@ -289,9 +289,9 @@ term.[^collobert19]
 ## A Brief History of the Label Bias Problem
 
 The first recorded observation of the label bias problem was in Léon Bottou’s
-PhD thesis.[^bottou91] The term "label-bias" was coined in the seminal work of
+PhD thesis.[^bottou91] The term "label bias" was coined in the seminal work of
 Lafferty, McCallum and Pereira introducing conditional random
-fields.[^mcallum00] Solving the label bias problem was one of the motivations
+fields.[^lafferty01] Solving the label bias problem was one of the motivations
 for developing the CRF. The CRF was one of earliest discriminative sequence
 models to give a principled solution to the label bias problem. 
 
