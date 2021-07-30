@@ -9,6 +9,14 @@ Understanding the label bias problem and when a certain model suffers from it
 is subtle but is essential to understand the design of models like conditional
 random fields and graph transformer networks.
 
+---
+
+This article is also available as a
+[PDF](https://www.awnihannun.com/writing/label_bias.pdf) along with the LaTex
+[source](https://github.com/awni/label_bias).
+
+---
+
 The label bias problem mostly shows up in discriminative sequence models. At
 its worst, label bias can cause a model to completely ignore the current
 observation when predicting the next label. How and why this happens is the
@@ -36,7 +44,7 @@ independent of all previous observations and labels given $x_t$ and $y_{t-1}$.
 Second, the observations $x_t$ are independent of one another. The first
 assumption is more central to the model while the second sometimes varies and
 is easier to relax. These assumptions can be seen from the graphical model.
-Mathematically, the model is written as 
+Mathematically, the model is written as
 \\[
  p(Y \mid X) = \prod_{t=1}^T p(y_t \mid x_t, y_{t-1}).
 \\]
@@ -56,7 +64,7 @@ Let's return to our example of `[the, cat, sat]`. We can represent the
 inference process on this sequence using a graph. The states (or nodes)
 represent the set of possible labels. The transitions (or edges) represent the
 possible observations along with the associated probabilities $p(y_t~\\!\mid~\\!x_t,
-y_{t-1})$. 
+y_{t-1})$.
 
 <div class="figure" style="margin-top:20px;margin-bottom:20px">
 <img src="{{ site.base_url }}/images/label-bias/memm_inference_normalized.svg" style="width:450px"/>
@@ -130,7 +138,7 @@ p(y_t \mid x_t, y_{t-1}) =
 \\]
 The contribution of $g(\cdot)$ in the numerator and denominator cancels. This
 causes all the information about how likely the observation is given the
-previous state to be erased. 
+previous state to be erased.
 
 ### Conservation of Score Mass
 
@@ -145,14 +153,14 @@ inference procedure will bias towards states with fewer outgoing transitions.
 Suppose we have three states, `A`, `B` and `C`, shown below. State
 `A` has four outgoing (nonzero) transitions, state `B` only has two and state
 `C` has just one. Suppose all three states distribute probability mass equally
-among their successor states: $p(y_t \mid x_t, y_{t-1})$ is uniform. 
+among their successor states: $p(y_t \mid x_t, y_{t-1})$ is uniform.
 
 <div class="figure" style="margin-top:20px;margin-bottom:20px">
 <img src="{{ site.base_url }}/images/label-bias/number_transitions.svg" style="width:600px"/>
 <div class="caption" markdown="span">
 An example of three states, `A`, `B` and `C`, which have uniform outgoing
 transition distributions. Label bias will cause the inference procedure to
-favor paths which go through state `C`. 
+favor paths which go through state `C`.
 </div>
 </div>
 
@@ -293,7 +301,7 @@ PhD thesis.[^bottou91] The term "label bias" was coined in the seminal work of
 Lafferty, McCallum and Pereira introducing conditional random
 fields.[^lafferty01] Solving the label bias problem was one of the motivations
 for developing the CRF. The CRF was one of earliest discriminative sequence
-models to give a principled solution to the label bias problem. 
+models to give a principled solution to the label bias problem.
 
 An even earlier sequence model which overcame the label bias problem was the
 check reading system proposed by Denker and Burges[^denker94], though they did
@@ -305,7 +313,7 @@ systems](https://leon.bottou.org/research/structured).
 ## A Few Examples
 
 In this section we'll look at a few examples of models, some of which suffer
-from label bias and some of which do not. 
+from label bias and some of which do not.
 
 ### Hidden Markov Model
 
@@ -393,18 +401,18 @@ $Y$ given an input $X$ can then be computed as
 Like sequence-to-sequence models with attention, the score function $s(\cdot)$
 is usually computed with a multi-layer neural network. Notice that CTC assumes
 the outputs $a_t$ are conditionally independent of one another given the input
-$X$. 
+$X$.
 
 The CTC model is a special case in that it is both locally normalized and
 globally normalized. Because of the conditional independence assumption, the
 two are equivalent. At the level of an individual alignment, we have
 \\[
-p(A \mid X) = \prod_{t=1}^T \frac{e^{s_t(a_t, X)}}{\sum_{i=1}^c e^{s_t(a_i, X)}} 
+p(A \mid X) = \prod_{t=1}^T \frac{e^{s_t(a_t, X)}}{\sum_{i=1}^c e^{s_t(a_i, X)}}
     = \frac{\prod_{t=1}^T e^{s_t(a_t, X)}}{\prod_{t=1}^T \sum_{i=1}^c e^{s_t(a_i, X)}}.
 \\]
-We can rewrite the denominator using the fact that 
+We can rewrite the denominator using the fact that
 \\[
-\prod_{j=1}^m \sum_{i_j=1}^n a_{i_j} = 
+\prod_{j=1}^m \sum_{i_j=1}^n a_{i_j} =
     \left(\sum_{i_1=1}^n a_{i_1}\right) \ldots \left(\sum_{i_m=1}^n a_{i_m}\right)
     = \sum_{i_1=1}^m \ldots \sum_{i_m=1}^n \prod_{j=1}^m a_{i_j}
 \\]
@@ -415,7 +423,7 @@ p(A \mid X) = \frac{e^{\sum_{t=1}^T s_t(a_t, X)}}{\sum_{A^\prime} e^{\sum_{t=1}^
 
 Used on its own, CTC does not suffer from label bias. There are a couple of
 ways to see this. First, as we described, CTC is globally normalized at the
-level of an alignment and label bias results from local normalization. 
+level of an alignment and label bias results from local normalization.
 
 Second, the conditional independence assumption made by CTC removes label bias.
 If the next state prediction does not depend on any previous state, then there
@@ -439,7 +447,7 @@ since it cannot select for paths based on previously predicted labels.
     [(pdf)](http://www.ai.mit.edu/courses/6.891-nlp/READINGS/maxent.pdf)
 
 [^denker94]:
-    John Denker and Christopher Burges. *Image Segmentation and Recognition*, 1994. 
+    John Denker and Christopher Burges. *Image Segmentation and Recognition*, 1994.
     [(link)](https://www.researchgate.net/publication/240039219_Image_Segmentation_and_Recognition)
 
 [^bottou91]:
@@ -448,7 +456,7 @@ since it cannot select for paths based on previously predicted labels.
     Paris XI, Orsay, France, 1991.
     [(link)](https://leon.bottou.org/papers/bottou-91a)
 
-[^lafferty01]: 
+[^lafferty01]:
     John Lafferty, Andrew McCallum, and Fernando C.N. Pereira. *Conditional
     Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data*, 2001.
     [(link)](https://repository.upenn.edu/cis_papers/159/)
@@ -462,7 +470,7 @@ since it cannot select for paths based on previously predicted labels.
     Ronan Collobert, Awni Hannun, and Gabriel Synnaeve. *A fully differentiable
     beam search decoder.* ICML 2019. [(link)](https://arxiv.org/abs/1902.06022)
 
-[^bottou97]: 
+[^bottou97]:
     Léon Bottou, Yoshua Bengio, and Yann LeCun. *Global training of document
     processing systems using graph transformer networks.* Proceedings of IEEE
     Computer Society Conference on Computer Vision and Pattern Recognition. IEEE, 1997.
