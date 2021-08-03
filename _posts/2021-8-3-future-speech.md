@@ -12,7 +12,8 @@ forecast the state of speech recognition research and applications by the year
 ---
 
 A longer version of this article with more technical details on the research
-and more comprehensive references is available as a [PDF](www.google.com).
+and more comprehensive references is available on
+[arXiv](https://arxiv.org/abs/2108.00084).
 
 ---
 
@@ -366,7 +367,10 @@ interactions with technology.
 
 ### Acknowledgements
 
-Thanks to Chris Lengerich, Marya Hannun, Sam Cooper, and Yusuf Hannun for their
+Thanks to <a href="https://twitter.com/chrislengerich">Chris Lengerich</a>,
+<a href="https://twitter.com/mrhannun">Marya Hannun</a>,
+<a href="https://www.linkedin.com/in/smartincooper/">Sam Cooper</a>,
+and <a href="https://twitter.com/yhannun">Yusuf Hannun</a> for their
 feedback.
 
 ### Footnotes
