@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Speech Recognition Is Not Solved 
+title: Speech Recognition Is Not Solved
 ---
 
 Ever since Deep Learning hit the scene in speech recognition, word error rates
@@ -57,7 +57,7 @@ With background noise, it's not uncommon for the SNR in a moving car to be as
 low as -5dB. People don't have much trouble understanding one another in these
 environments. Speech recognizers, on the other hand, degrade more rapidly with
 noise. In the figure above we see the gap between the human and the model error
-rates increase dramatically from the low SNR to the high SNR audio. 
+rates increase dramatically from the low SNR to the high SNR audio.
 
 ## Semantic Errors
 
@@ -80,7 +80,7 @@ could misinterpret every sentence even with a 5% WER.
 When comparing models to humans, it's important to check the nature of the
 mistakes and not just look at the WER as a conclusive number. In my own
 experience, human transcribers tend to make fewer and less drastic semantic
-errors than speech recognizers. 
+errors than speech recognizers.
 
 Researchers at Microsoft recently compared mistakes made by humans and their
 human-level speech recognizer.[^human_comparison] One discrepancy they found
@@ -206,7 +206,7 @@ I look forward to the next five years of progress on these and other fronts.
 
 ### Acknowledgements
 
-Thanks to [@mrhannun](https://twitter.com/mrhannun) for useful feedback and edits.
+Thanks to [@mrhannun](https://twitter.com/MaryaHannun) for useful feedback and edits.
 
 ### Edit
 
@@ -222,7 +222,7 @@ Hacker News [discussion](https://news.ycombinator.com/item?id=15542669).
     The accented speech comes from [VoxForge]. The noise-free and noisy
     speech comes from the third [CHiME] challenge.
 
-[^contacts]: 
+[^contacts]:
     See [Aleksic et al., 2015](http://ieeexplore.ieee.org/document/7178957/)
     for an example of how to improve contact name recognition.
 

@@ -368,7 +368,7 @@ interactions with technology.
 ### Acknowledgements
 
 Thanks to <a href="https://twitter.com/chrislengerich">Chris Lengerich</a>,
-<a href="https://twitter.com/mrhannun">Marya Hannun</a>,
+<a href="https://twitter.com/MaryaHannun">Marya Hannun</a>,
 <a href="https://www.linkedin.com/in/smartincooper/">Sam Cooper</a>,
 and <a href="https://twitter.com/yhannun">Yusuf Hannun</a> for their
 feedback.
