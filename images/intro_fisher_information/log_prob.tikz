@@ -1,0 +1,25 @@
+\documentclass[tikz]{standalone}
+
+\begin{document}
+\tikzset{every picture/.style={line width=0.65pt}} %set default line width to 0.75pt
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Axis 2D [id:dp4745046015034835]
+\draw  (243,223.65) -- (550,223.65)(267.9,100) -- (267.9,240) (540,218.65) -- (550,223.65) -- (540,228.65) (262.9,110) -- (267.9,100) -- (272.9,110)  ;
+%Curve Lines [id:da06160110157103116]
+\draw    (237,212.5) .. controls (285.39,233.46) and (321,248.5) .. (345,214.5) .. controls (369,180.5) and (352,202.5) .. (377,169.5) .. controls (402,136.5) and (459,140.5) .. (530,143) ;
+%Shape: Ellipse [id:dp37047896391268953]
+\draw  [dash pattern={on 5.63pt off 4.5pt}][line width=1.0]  (339.02,220.75) .. controls (335.82,218.3) and (344.2,201.99) .. (357.73,184.33) .. controls (371.27,166.66) and (384.83,154.32) .. (388.02,156.77) .. controls (391.21,159.22) and (382.83,175.52) .. (369.3,193.19) .. controls (355.77,210.86) and (342.21,223.19) .. (339.02,220.75) -- cycle ;
+%Shape: Ellipse [id:dp869042647631143]
+\draw  [dash pattern={on 1.69pt off 2.76pt}][line width=1.0]  (413.24,143.07) .. controls (413.13,138.95) and (429.05,135.16) .. (448.81,134.6) .. controls (468.56,134.04) and (484.67,136.93) .. (484.79,141.05) .. controls (484.91,145.16) and (468.98,148.95) .. (449.23,149.51) .. controls (429.47,150.07) and (413.36,147.19) .. (413.24,143.07) -- cycle ;
+%Straight Lines [id:da625593316374383]
+\draw    (377,125.5) -- (392.65,142.53) ;
+\draw [shift={(394,144)}, rotate = 227.42000000000002] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+\draw (400, 230) node [anchor=north west][inner sep=0.75pt][font=\small] {$\theta $};
+\draw (328, 108) node [anchor=north west][inner sep=0.75pt][font=\small] {$\ell (\theta \mid x)$};
+
+\end{tikzpicture}
+\end{document}
