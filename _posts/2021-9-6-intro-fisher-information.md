@@ -19,7 +19,7 @@ distribution.
 This tutorial uses [Orbit](https://withorbit.com/), a learning tool for
 periodic review. At the end of some of the sections there will be an Orbit
 review area. The review will ask questions related to the material, and you
-should attempt to answer them. If you create an account with Orbit then you
+should attempt to answer them. If you create an account with Orbit, then you
 will be periodically prompted (over email) to answer a few of the review
 questions. Periodically answering the review questions will develop a
 long-lasting memory of the material.
@@ -32,26 +32,26 @@ TODOs
 More Review questions.
 -->
 
-Suppose we have samples from a parameterized distribution where the form is
-known but the parameters are not. For example, we might know the distribution
-is a Gaussian, but we don't know the value of the mean or variance. We would
-like to assess how difficult the parameters are to estimate given the samples.
-One way to answer this question is to estimate the amount of information that
-the samples contain about the parameters. The more information the samples
-contain about the parameters, the easier they are to estimate. Conversely, the
-less information the samples contain about the parameters, the harder they are
-to estimate.
+Suppose we have samples from a distribution where the form is known but the
+parameters are not. For example, we might know the distribution is a Gaussian,
+but we don't know the value of the mean or variance. We want to know
+how difficult the parameters are to estimate given the samples. One way to
+answer this question is to estimate the amount of information that the samples
+contain about the parameters. The more information the samples contain about
+the parameters, the easier they are to estimate. Conversely, the less
+information the samples contain about the parameters, the harder they are to
+estimate.
 
-Fisher information is one way to measure the information that the samples
+Fisher information is one way to measure how much information the samples
 contain about the parameters. There are alternatives, but Fisher information is
 the most well known. Before we get to the formal definition, which takes some
 time to get familiar with, let's motivate Fisher information with an example.
 
-Let's say we have a sample from a Gaussian distribution parameterized by mean
+Let's say we have a sample from a Gaussian distribution with a mean
 $\mu$ and variance $\sigma^2$. The variance $\sigma^2$ is known, and the goal
 is to estimate the mean, $\mu$. To understand how difficult this is, we would
 like to know how much information we can expect the sample to contain about
-$\mu$.  [Figure 1](#fig:gaussians) shows three Guassian distributions with
+$\mu$.  [Figure 1](#fig:gaussians) shows three Gaussian distributions with
 three different variances. We expect that the mean is easiest to estimate for
 the Gaussian distribution with the smallest variance. A random sample is more
 likely to be close to the mean when the variance is small than when the
@@ -61,29 +61,29 @@ $\sigma$ shrinks.
 <div class="figure" id="fig:gaussians">
 <img src="{{ site.base_url }}/images/intro_fisher_information/gaussians.svg" style="width:600px"/>
 <div class="caption" markdown="span">
-**Figure 1:** Three Gaussians with increasing standard deviations. As the
-standard deviation increases the samples carry less information about the mean
-of the distribution.
+**Figure 1:** Three Gaussian distributions with increasing standard deviations.
+As the standard deviation increases the samples carry less information about
+the mean of the distribution.
 </div>
 </div>
 
-Let's denote the information content of the sample $x$ at the mean $\mu$ by
-$\mathcal{I}\_x(\mu)$. In the case of the Gaussian, we might expect the
+Let's $\mathcal{I}\_x(\mu)$ to represent the information content of a sample
+$x$ at the mean $\mu$.  In the case of the Gaussian, we might expect the
 information content of the sample to be inversely proportional to the variance,
 $\mathcal{I}\_x(\mu) \propto 1 / \sigma^2$.
 
-Notice also that the information content is a function of the parameter we are
-trying to estimate, $\mathcal{I}\_x(\mu)$. Different values of the parameter could be
-easier or harder to estimate. The Gaussian distribution shifts based on $\mu$
-but is otherwise unchanged, so it makes sense that the information content
-doesn't depend on $\mu$.
+Notice also that the information content is a function of $\mu$, the parameter
+we want to estimate. Different values of the parameter could be easier or
+harder to estimate. The Gaussian distribution shifts based on $\mu$ but is
+otherwise unchanged, so the information content should only depend on $\sigma$
+and not on $\mu$.
 
 Another important point is that $x$ is a random sample. We don't want to
-specify a specific value for $x$. Instead, we'd like the information content of
-$x$ to consider all possible values for $x$ and their corresponding
-probabilities. A value for $x$ which might tell us a lot about the parameter
-but is exceedingly unlikely shouldn't contribute much to the information
-content. Taking an expectation over $x$ is a natural way to quantify this goal.
+specify a value for $x$. Instead, we'd like the information content of $x$ to
+consider all possible values for $x$ and their corresponding probabilities. A
+value for $x$ which might tell us a lot about the parameter but is exceedingly
+unlikely shouldn't contribute much to the expected information content of the
+sample. Taking an expectation over $x$ is a natural way to account for this.
 
 The Fisher information can be expressed in multiple ways, none of which are
 easy to interpret at a glance. Let's start with one of these definitions and
@@ -118,10 +118,10 @@ The Fisher information attempts to quantify the sensitivity of the random
 variable $x$ to the value of the parameter $\theta$. If small changes in
 $\theta$ result in large changes in the likely values of $x$, then the samples
 we observe tell us a lot about $\theta$. In this case the Fisher information
-should be high. This idea agrees with our interpretation of the Gaussians in
-[figure 1](#fig:gaussians). A low variance means we will see large changes in
-the observed $x$ with small changes in the mean. In this case the Fisher
-information of $x$ about the mean $\mu$ is large.
+should be high. This idea agrees with our interpretation of the Gaussian
+distributions in [figure 1](#fig:gaussians). A low variance means we will see
+large changes in the observed $x$ with small changes in the mean. In this case
+the Fisher information of $x$ about the mean $\mu$ is large.
 
 <div class="figure" id="fig:log_prob">
 <img src="{{ site.base_url }}/images/intro_fisher_information/log_prob.svg" style="width:500px"/>
@@ -201,13 +201,13 @@ function of $x$ for a mean $\mu = 0$ and variance $\sigma = 1$.
 </div>
 
 As before, let's say we have a random sample, $x$, from a Gaussian distribution
-for which we would like to compute the Fisher information at the unkown mean,
+for which we would like to compute the Fisher information at the unknown mean,
 $\mu$. [Figure 3](#fig:fisher_gaussian_steps) shows from left to right the
 construction of the term inside the expectation in [equation
 1](#eq:fisher_information) used to compute the Fisher information. The
 probability distribution is a zero-mean, unit-variance Gaussian distribution
 ($\mu = 0$ and $\sigma = 1$). [Figure 3c](#fig:fisher_gaussian_steps) shows the
-derivative with repsect to $\mu$ of the log-likelihood but as a function of
+derivative with respect to $\mu$ of the log-likelihood but as a function of
 $x$.  [Figure 3d](#fig:fisher_gaussian_steps) shows the square of this
 derivative as a function of $x$. The Fisher information is computed by taking
 the expectation over $x$ of the curve in [figure
@@ -260,7 +260,7 @@ As expected, the Fisher information is inversely proportional to the variance.
 
 ### Bernoulli Distribution
 
-Let's look at a Bernoulli distribution as another example. The Bernoulli
+Let's use the Bernoulli distribution as another example. The Bernoulli
 distribution is that of a biased coin which has probability $\theta$ of turning
 up heads (or $1$) and probability $1-\theta$ of turning up tails (or $0$). We
 should expect that the more biased the coin, the easier it is to identify the
@@ -297,7 +297,7 @@ squared derivatives:
 \\[
     \mathcal{I}_x(\theta) = \theta \frac{1}{\theta^2} + (1-\theta) \frac{1}{(\theta-1)^2}
      = \frac{1}{\theta} + \frac{1}{1 - \theta}
-     = \frac{1}{\theta (1 - \theta)}
+     = \frac{1}{\theta (1 - \theta)}.
 \\]
 The Fisher information in [figure 5d](#fig:fisher_bernoulli) has the shape we
 expect. As $\theta$ approaches $0$ or $1$, the Fisher information grows
@@ -334,13 +334,13 @@ Fisher information of a single sample:
 \mathcal{I}\_{x\_1, \ldots, x\_n}(\theta) =  \sum\_{i=1}^n \mathcal{I}\_{x\_i}(\theta) = n \, \mathcal{I}\_{x\_1}(\theta).
 \\]
 
-**Post-processing.** The Fisher information also obeys a data processing
+**Post-processing.** The Fisher information obeys a data processing
 inequality. The Fisher information of $x$ at $\theta$ cannot be increased by
-applying any function to $x$. If $f(x)$ is an arbitrary function of $x$ then:
+applying any function to $x$. If $f(x)$ is an arbitrary function of $x$, then:
 \\[
 \mathcal{I}\_{f(x)}(\theta) \le \mathcal{I}\_{x}(\theta).
 \\]
-The ineqaulity holds with equality when $f(x)$ is a *sufficient statistic* for
+The inequality holds with equality when $f(x)$ is a *sufficient statistic* for
 $\theta$. A statistic is sufficient for $\theta$ if $\theta$ does not change
 the conditional probability of $x$ given the statistic:
 \\[ p(x~\mid~f(x),~\theta)~ =~p(x~\mid~f(x)). \\]
@@ -357,7 +357,7 @@ and the second form is:
     \mathcal{I}_x(\theta) = \textrm{Var}\left(\ell^\prime (\theta \mid x) \right).
 \\]
 A reason to know about these alternate definitions is that in some cases they
-can be easier to compute than the version from [equation
+can be easier to compute than the version in [equation
 1](#eq:fisher_information). To show these are equivalent to the definition in
 [equation 1](#eq:fisher_information), we need a couple of observations.
 
@@ -436,10 +436,9 @@ score function is $0$ ([observation 2](#obs:expected_score)):
 ### Multivariate Fisher Information
 
 The definition of Fisher information can be extended to include multiple
-parameters. Suppose we want the Fisher information $\mathcal{I}\_x(\theta)$
-given the distribution $p(x \mid \theta)$ $\theta \in \mathbb{R}^d$ is a
-$d$-dimensional vector. The multivariate first-order generalization of the
-Fisher information is:
+parameters. In this case, the parameters of the distribution are now a
+$d$-dimensional vector, $\theta \in \mathbb{R}^d$. The multivariate first-order
+generalization of the Fisher information is:
 \\[
     \mathcal{I}\_x(\theta) = \mathbb{E}\left[\nabla_\theta \ell(\theta \mid x)
         \nabla\_\theta \ell(\theta \mid x)^\top\right],
@@ -464,7 +463,6 @@ derivatives of the log-likelihood with respect to $\theta$.
 
 ### Cramér-Rao Bound
 
-
 An estimator for a parameter of a distribution is a function which takes as
 input the sample and returns an estimate for the parameter. Let's use
 $\hat{\theta}(x)$ to represent an estimator for the parameter $\theta$. The
@@ -476,7 +474,7 @@ parameter $\theta$:
 The Cramér-Rao bound is an inequality which relates the variance of an
 estimator of a parameter $\theta$ to the Fisher information of a sample $x$ at
 $\theta$. If $x$ contains less information about $\theta$, then we expect
-$\theta$ to be harder to estimate given $x$. The Cramer-Rao bound makes this
+$\theta$ to be harder to estimate given $x$. The Cramér-Rao bound makes this
 statement precise.  In the simplest case, if $\hat{\theta}(x)$ is an unbiased
 estimator of $\theta$ given $x$, the Cramér-Rao bound states:
 \\[
@@ -512,7 +510,8 @@ Using the log-derivative trick again ([observation 1](obs:log_derivative)):
     &= \frac{\partial}{\partial \theta} \theta = 1,
 \end{align\*}
 \\]
-where in the second-to-last step we use the fact that the estimator is unbiased. This tells us that the covariance is one:
+where in the second-to-last step we use the fact that the estimator is
+unbiased. This tells us that the covariance is one:
 \\[
     \textrm{Cov}\left(\hat{\theta}(x), \ell^\prime(\theta \mid x) \right) = 1.
 \\]
@@ -597,10 +596,10 @@ estimating parameters of a distribution given samples from it. I'll briefly
 discuss two such applications: natural gradient descent and data privacy.
 
 **Natural gradient descent.** Fisher information is used to compute the natural
-gradient used for numerical optimization. Natural gradient
-descenti[^natural_gradient] is not commonly used directly in deep learning
-problems due to computational difficulties, but it motivates some more common
-optimization methods algorithms.
+gradient used in numerical optimization. Natural gradient
+descent[^natural_gradient] is not commonly used directly in large
+machine-learning problems due to computational difficulties, but it motivates
+some more commonly used optimization methods.
 
 One way to view standard gradient descent is that it searches for the best
 update within a small region around the current parameters. This region is
@@ -611,23 +610,22 @@ divergence. In this case the KL divergence is used to measure the distance
 between the likelihood function at the current parameters and the likelihood
 function at the updated parameters.
 
-Natural gradient descent has a form quite similar to Newton's method. Instead
-of using the inverse Hessian natural gradient descent uses the inverse of the
-expected Hessian which is the same as the inverse of the Fisher information
-matrix. The update is:
+Natural gradient descent looks similar to Newton's method. It replaces the
+inverse Hessian with the inverse of the expected Hessian, which is the same as
+the inverse of the Fisher information matrix. The update is:
 \\[
-\mathcal{I}\_(\theta)^{-1} \nabla_\theta \mathcal{L}(\theta)
+\mathcal{I}\_(\theta)^{-1} \nabla_\theta \mathcal{L}(\theta),
 \\]
 where $\mathcal{L}$ is the likelihood function.
 
 **Data privacy.** One relatively recent use for Fisher information (which is an
-area I am working on[^privacy]) is to use Fisher information as tool for data
-privacy. We can invert the role of the samples and the parameters and instead
-measure the Fisher information of the parameters at the samples. The parameters
-in this case could be a machine-learning model and the samples are data from
-different individuals on which the model was trained. The Fisher information of
-the model about the data then quantifies the privacy loss for different
-individuals when revealing the model.
+area I am working on[^privacy]) is to use Fisher information as a tool for data
+privacy. We can invert the role of the samples and the parameters and measure
+the Fisher information of the parameters at the samples. The parameters in this
+case could be a machine-learning model and the samples are data from different
+individuals on which the model was trained. The Fisher information of the model
+about the data then quantifies the privacy loss for different individuals when
+revealing the model.
 
 ### Footnotes
 
@@ -636,5 +634,3 @@ individuals when revealing the model.
 
 [^privacy]:
     Our recent research on this is detailed in Hannun, *et al.*, *Measuring Data Leakage in Machine-Learning Models with Fisher Information*, Uncertainty in Artificial Intelligence, 2021.  [(link)](https://arxiv.org/abs/2102.11673)
-
-
