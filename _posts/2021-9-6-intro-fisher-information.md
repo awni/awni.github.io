@@ -8,8 +8,8 @@ draft: True
 
 A common question among statisticians and data analysts is how accurately we
 can estimate the parameters of a distribution given some samples from it.
-*Fisher information* can help answer this question by quantifying the
-amount of information that the samples contain about the unknown parameters of the
+*Fisher information* can help answer this question by quantifying the amount of
+information that the samples contain about the unknown parameters of the
 distribution.
 
 ---
@@ -29,9 +29,7 @@ long-lasting memory of the material.
 <!--
 TODOs
 - Review tutorial for clarity
-- Discussion of why Fisher information is useful, link to recent work on
-  measure of privacy, natural gradient
-Review questions:
+More Review questions.
 -->
 
 Suppose we have samples from a parameterized distribution where the form is
@@ -183,6 +181,7 @@ value of $x$.
 
 </orbit-reviewarea>
 
+
 ### Gaussian Distribution
 
 As mentioned earlier, the log-likelihood in [figure 2](#fig:log_prob) is for a
@@ -314,9 +313,10 @@ The Fisher information has several properties which make it easier to work
 with. I'll mention two of the more salient ones here &mdash; the chain rule and the
 post-processing inequality.
 
-**Chain rule:** Analogous to the chain rule of probability, the Fisher information obeys an additive chain rule:
+**Chain rule.** Analogous to the chain rule of probability, the Fisher
+information obeys an additive chain rule:
 \\[
-\mathcal{I}_{x, y}(\theta) =  \mathcal{I}\_{x \mid y}(\theta) + \mathcal{I}_y(\theta).
+\mathcal{I}\_{x, y}(\theta) =  \mathcal{I}\_{x \mid y}(\theta) + \mathcal{I}\_y(\theta).
 \\]
 The conditional Fisher information is defined as:
 \\[
@@ -327,12 +327,16 @@ When the samples $x$ and $y$ are independent, the chain rule simplifies to:
 \\[
 \mathcal{I}\_{x, y}(\theta) =  \mathcal{I}\_{x}(\theta) + \mathcal{I}\_y(\theta).
 \\]
-So if we have $x\_1, \ldots, x\_n$ independent and identically distributed samples, the Fisher information for all $n$ samples simplifies to $n$ times the Fisher information of a single sample:
+So if we have $x\_1, \ldots, x\_n$ independent and identically distributed
+samples, the Fisher information for all $n$ samples simplifies to $n$ times the
+Fisher information of a single sample:
 \\[
 \mathcal{I}\_{x\_1, \ldots, x\_n}(\theta) =  \sum\_{i=1}^n \mathcal{I}\_{x\_i}(\theta) = n \, \mathcal{I}\_{x\_1}(\theta).
 \\]
 
-**Post-processing:** The Fisher information also obeys a data processing inequality. The Fisher information of $x$ at $\theta$ cannot be increased by applying any function to $x$. If $f(x)$ is an arbitrary function of $x$ then:
+**Post-processing.** The Fisher information also obeys a data processing
+inequality. The Fisher information of $x$ at $\theta$ cannot be increased by
+applying any function to $x$. If $f(x)$ is an arbitrary function of $x$ then:
 \\[
 \mathcal{I}\_{f(x)}(\theta) \le \mathcal{I}\_{x}(\theta).
 \\]
@@ -358,17 +362,17 @@ can be easier to compute than the version from [equation
 [equation 1](#eq:fisher_information), we need a couple of observations.
 
 <div id="obs:log_derivative_trick" />
-**Observation 1:** This observation is sometimes called the log-derivative trick
-in reinforcement learning algorithms.  Using the chain rule of differentiation:
+**Observation 1.** This observation is sometimes called the log-derivative trick
+in reinforcement learning algorithms. Using the chain rule of differentiation:
 \\[
     \ell^\prime(\theta \mid x) = \frac{d}{d\theta} \log p(x \mid \theta)
         = \frac{1}{p(x \mid \theta)} \frac{d}{d \theta} p(x \mid \theta).
 \\]
 
 <div id="obs:expected_score" />
-**Observation 2:** The expected value of the score function is zero. That is
+**Observation 2.** The expected value of the score function is zero. That is
 $\mathbb{E}\left[\ell^\prime(\theta \mid x)\right] = 0$. We can show this using
-the log-derivative trick in [observation 1](#obs:log_derivative_trick):
+the log-derivative trick from [observation 1](#obs:log_derivative_trick):
 \\[
 \begin{equation\*}
 \begin{split}
@@ -384,7 +388,7 @@ the log-derivative trick in [observation 1](#obs:log_derivative_trick):
 In the last step above (and in the rest of this tutorial) we assume the derivative
 and integral can be exchanged.
 
-To show $\mathcal{I}_x(\theta) = -\mathbb{E} \left[\ell^{\prime\prime}(\theta
+To show $\mathcal{I}\_x(\theta) = -\mathbb{E} \left[\ell^{\prime\prime}(\theta
 \mid x)\right]$, we start by expanding the $\ell^{\prime\prime}(\theta \mid x)$
 using [observation 1](#obs:log_derivative_trick) and then apply the product
 rule of differentiation:
@@ -415,10 +419,10 @@ The first term is on the right is the negative of the Fisher information. The se
     &= \frac{d^2}{d \theta^2} \int_x p(x \mid \theta) \, dx = \frac{d^2}{d \theta^2} 1 = 0.
 \end{align\*}
 \\]
-Thus we have the result that $\mathcal{I}_x(\theta) = -\mathbb{E}
+Thus we have the result that $\mathcal{I}\_x(\theta) = -\mathbb{E}
 \left[\ell^{\prime \prime}(\theta \mid x) \right]$.
 
-The statement $\mathcal{I}_x(\theta) = \textrm{Var}\left(\ell^\prime (\theta
+The statement $\mathcal{I}\_x(\theta) = \textrm{Var}\left(\ell^\prime (\theta
 \mid x) \right)$, follows directly from the fact that the expected value of the
 score function is $0$ ([observation 2](#obs:expected_score)):
 \\[
@@ -486,7 +490,7 @@ Alice and Bob:
 
 The Cramér-Rao bound says that on average the squared difference between Bob's
 estimate and the true value of the parameter will be greater than $1 /
-\mathcal{I}_x(\theta)$.
+\mathcal{I}\_x(\theta)$.
 
 The proof of the Cramér-Rao bound is only a few lines. First, since the
 expected value of the score function is zero ([observation
@@ -499,7 +503,7 @@ expected value of the score function is zero ([observation
 \\]
 Using the log-derivative trick again ([observation 1](obs:log_derivative)):
 \\[
-\begin{align*}
+\begin{align\*}
     \mathbb{E} \left[\hat{\theta}(x) \ell^\prime(\theta \mid x) \right]
     &= \int_x p(x\mid \theta) \hat{\theta}(x) \frac{\partial}{\partial \theta} \log p(x \mid \theta) d\,x \cr
     &= \int_x p(x\mid \theta) \hat{\theta}(x) \frac{1}{p(x\mid \theta)} \frac{\partial}{\partial \theta} p(x \mid \theta) d\,x \cr
@@ -585,5 +589,52 @@ hence:
     answer="$\textrm{Var}\left(\hat{\theta}(x)\right) \ge 1 / \mathcal{I}_x(\theta)$"
   ></orbit-prompt>
 </orbit-reviewarea>
+
+### More Uses of Fisher Information
+
+The Fisher information has applications beyond quantifying the difficulty in
+estimating parameters of a distribution given samples from it. I'll briefly
+discuss two such applications: natural gradient descent and data privacy.
+
+**Natural gradient descent.** Fisher information is used to compute the natural
+gradient used for numerical optimization. Natural gradient
+descenti[^natural_gradient] is not commonly used directly in deep learning
+problems due to computational difficulties, but it motivates some more common
+optimization methods algorithms.
+
+One way to view standard gradient descent is that it searches for the best
+update within a small region around the current parameters. This region is
+defined by the standard Euclidean distance to the existing parameters. Natural
+gradient descent is the same idea, but instead of defining the region with
+Euclidean distance it defines the region using the Kullback-Liebler (KL)
+divergence. In this case the KL divergence is used to measure the distance
+between the likelihood function at the current parameters and the likelihood
+function at the updated parameters.
+
+Natural gradient descent has a form quite similar to Newton's method. Instead
+of using the inverse Hessian natural gradient descent uses the inverse of the
+expected Hessian which is the same as the inverse of the Fisher information
+matrix. The update is:
+\\[
+\mathcal{I}\_(\theta)^{-1} \nabla_\theta \mathcal{L}(\theta)
+\\]
+where $\mathcal{L}$ is the likelihood function.
+
+**Data privacy.** One relatively recent use for Fisher information (which is an
+area I am working on[^privacy]) is to use Fisher information as tool for data
+privacy. We can invert the role of the samples and the parameters and instead
+measure the Fisher information of the parameters at the samples. The parameters
+in this case could be a machine-learning model and the samples are data from
+different individuals on which the model was trained. The Fisher information of
+the model about the data then quantifies the privacy loss for different
+individuals when revealing the model.
+
+### Footnotes
+
+[^natural_gradient]:
+    See for example Shun-ichi Amari, *Natural Gradient Works Efficiently in Learning*, Neural Computation, 1998. [(link)](https://direct.mit.edu/neco/article/10/2/251/6143/Natural-Gradient-Works-Efficiently-in-Learning)
+
+[^privacy]:
+    Our recent research on this is detailed in Hannun, *et al.*, *Measuring Data Leakage in Machine-Learning Models with Fisher Information*, Uncertainty in Artificial Intelligence, 2021.  [(link)](https://arxiv.org/abs/2102.11673)
 
 
