@@ -7,3 +7,7 @@ permalink: /about/
 I am currently a Distinguished Scientist at Zoom AI. Before that I was a
 Research Scientist at Facebook AI Research. You can find more information at my
 [academic webpage](https://awnihannun.com/).
+
+Any feedback, typos, or comments about the posts in this blog are welcome.
+Please create an [issue](https://github.com/awni/awni.github.io/issues/new) in
+the [GitHub repository](https://github.com/awni/awni.github.io) for this blog.
