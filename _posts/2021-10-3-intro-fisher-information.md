@@ -21,16 +21,10 @@ periodic review. At the end of some of the sections there will be an Orbit
 review area. The review will ask questions related to the material, and you
 should attempt to answer them. If you create an account with Orbit, then you
 will be periodically prompted (over email) to answer a few of the review
-questions. Periodically answering the review questions will develop a
+questions. Periodically answering the review questions will help you develop a
 long-lasting memory of the material.
 
 ---
-
-<!--
-TODOs
-- Review tutorial for clarity
-More Review questions.
--->
 
 Suppose we have samples from a distribution where the form is known but the
 parameters are not. For example, we might know the distribution is a Gaussian,
@@ -67,16 +61,14 @@ the mean of the distribution.
 </div>
 </div>
 
-Let's $\mathcal{I}\_x(\mu)$ to represent the information content of a sample
-$x$ at the mean $\mu$.  In the case of the Gaussian, we might expect the
+Let's use $\mathcal{I}\_x(\mu)$ to represent the information content of a
+sample $x$ at the mean $\mu$.  In the case of the Gaussian, we might expect the
 information content of the sample to be inversely proportional to the variance,
-$\mathcal{I}\_x(\mu) \propto 1 / \sigma^2$.
-
-Notice also that the information content is a function of $\mu$, the parameter
-we want to estimate. Different values of the parameter could be easier or
-harder to estimate. The Gaussian distribution shifts based on $\mu$ but is
-otherwise unchanged, so the information content should only depend on $\sigma$
-and not on $\mu$.
+$\mathcal{I}\_x(\mu) \propto 1 / \sigma^2$. In general the information content
+will be a function of $\mu$, the parameter we want to estimate. Different
+values of the parameter could be easier or harder to estimate. However, for the
+Gaussian, $\mu$ only shifts the mode of the distribution, so the information
+content only depends on $\sigma$ and not on $\mu$.
 
 Another important point is that $x$ is a random sample. We don't want to
 specify a value for $x$. Instead, we'd like the information content of $x$ to
@@ -119,7 +111,7 @@ variable $x$ to the value of the parameter $\theta$. If small changes in
 $\theta$ result in large changes in the likely values of $x$, then the samples
 we observe tell us a lot about $\theta$. In this case the Fisher information
 should be high. This idea agrees with our interpretation of the Gaussian
-distributions in [figure 1](#fig:gaussians). A low variance means we will see
+distributions in [figure 1](#fig:gaussians). A small variance means we will see
 large changes in the observed $x$ with small changes in the mean. In this case
 the Fisher information of $x$ about the mean $\mu$ is large.
 
@@ -200,7 +192,7 @@ function of $x$ for a mean $\mu = 0$ and variance $\sigma = 1$.
 </div>
 </div>
 
-As before, let's say we have a random sample, $x$, from a Gaussian distribution
+As before, let's say we have a random sample $x$ from a Gaussian distribution
 for which we would like to compute the Fisher information at the unknown mean,
 $\mu$. [Figure 3](#fig:fisher_gaussian_steps) shows from left to right the
 construction of the term inside the expectation in [equation
@@ -572,10 +564,6 @@ hence:
     answer="$\mathcal{I}_x(\theta) = \mathbb{E}\left[\nabla_\theta \ell(\theta \mid x) \nabla_\theta \ell(\theta \mid x)^\top \right]$"
   ></orbit-prompt>
    <orbit-prompt
-    question="Define the Fisher information when $\theta \in \mathbb{R}^d$ in terms of $\nabla_\theta \ell(\theta~\mid~x)$."
-    answer="$\mathcal{I}_x(\theta) = \mathbb{E}\left[\nabla_\theta \ell(\theta \mid x) \nabla_\theta \ell(\theta \mid x)^\top \right]$"
-  ></orbit-prompt>
-   <orbit-prompt
     question="What does it mean for an estimator $\hat{\theta}(x)$ of a parameter $\theta$ to be unbiased?"
     answer="$\mathbb{E}\left[\hat{\theta}(x) \right] = \theta$"
   ></orbit-prompt>
@@ -619,13 +607,13 @@ the inverse of the Fisher information matrix. The update is:
 where $\mathcal{L}$ is the likelihood function.
 
 **Data privacy.** One relatively recent use for Fisher information (which is an
-area I am working on[^privacy]) is to use Fisher information as a tool for data
-privacy. We can invert the role of the samples and the parameters and measure
-the Fisher information of the parameters at the samples. The parameters in this
-case could be a machine-learning model and the samples are data from different
-individuals on which the model was trained. The Fisher information of the model
-about the data then quantifies the privacy loss for different individuals when
-revealing the model.
+area I am working on[^privacy]) is using it as a tool for data privacy. We can
+invert the role of the samples and the parameters and measure the Fisher
+information of the parameters at the samples. The parameters in this case could
+be a machine-learning model, and the samples are data from different individuals
+on which the model was trained. The Fisher information of the model about the
+data then quantifies the privacy loss for different individuals when revealing
+the model.
 
 ### Footnotes
 
