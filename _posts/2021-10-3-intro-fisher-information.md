@@ -3,7 +3,6 @@ layout: post
 title: An Introduction to Fisher Information
 katex: True
 orbit: True
-draft: True
 ---
 
 A common question among statisticians and data analysts is how accurately we
