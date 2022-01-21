@@ -601,7 +601,7 @@ Natural gradient descent looks similar to Newton's method. It replaces the
 inverse Hessian with the inverse of the expected Hessian, which is the same as
 the inverse of the Fisher information matrix. The update is:
 \\[
-\mathcal{I}\_(\theta)^{-1} \nabla_\theta \mathcal{L}(\theta),
+\mathcal{I}(\theta)^{-1} \nabla_\theta \mathcal{L}(\theta),
 \\]
 where $\mathcal{L}$ is the likelihood function.
 
