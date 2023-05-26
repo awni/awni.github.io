@@ -401,7 +401,7 @@ The next step is to take the expectation over $x$:
     -\mathbb{E} \left[\ell^\prime(\theta \mid x)^2 \right]  +
         \mathbb{E} \left[ \frac{1}{p(x \mid \theta) } \frac{d^2}{d \theta^2} p(x \mid \theta) \right].
 \\]
-The first term is on the right is the negative of the Fisher information. The second term on the right is zero:
+The first term on the right is the negative of the Fisher information. The second term on the right is zero:
 \\[
 \begin{align\*}
 \mathbb{E} \left[ \frac{1}{p(x \mid \theta) } \frac{d^2}{d \theta^2} p(x \mid \theta) \right]
